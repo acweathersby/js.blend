@@ -1,0 +1,1371 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ms",
+				"msg_pointer"
+			],
+			[
+				"add",
+				"address"
+			],
+			[
+				"out",
+				"out_buffer"
+			],
+			[
+				"CL",
+				"Class_Tree"
+			],
+			[
+				"re",
+				"require"
+			],
+			[
+				"Mouse",
+				"MouseWheel"
+			],
+			[
+				"time",
+				"time_component"
+			],
+			[
+				"ra",
+				"random_component"
+			],
+			[
+				"ob",
+				"object_component"
+			],
+			[
+				"use",
+				"user_component"
+			],
+			[
+				"r",
+				"random"
+			],
+			[
+				"pr",
+				"priority"
+			],
+			[
+				"bkl",
+				"blank_1"
+			],
+			[
+				"sta",
+				"stackB"
+			],
+			[
+				"stac",
+				"stack_pointer"
+			],
+			[
+				"rU",
+				"rUINT8"
+			],
+			[
+				"pro",
+				"property"
+			],
+			[
+				"ex",
+				"expression"
+			],
+			[
+				"nod",
+				"used_nodes"
+			],
+			[
+				"UN",
+				"UNIFORM_FLAG_MASK"
+			],
+			[
+				"new",
+				"new_pointer"
+			],
+			[
+				"0x8",
+				"0x80000000"
+			],
+			[
+				"FL",
+				"UNIFORM_FLAG_INT_SET"
+			],
+			[
+				"of",
+				"offset"
+			],
+			[
+				"bs",
+				"bstep_max"
+			],
+			[
+				"inst",
+				"instruction_pointer"
+			],
+			[
+				"Bloc",
+				"BlockSize"
+			],
+			[
+				"data",
+				"data_address"
+			],
+			[
+				"mess",
+				"message_address"
+			],
+			[
+				"mes",
+				"message_address"
+			],
+			[
+				"O",
+				"ObjectSerialize"
+			],
+			[
+				"Fl",
+				"Float64Array"
+			],
+			[
+				"buffer",
+				"buffer1"
+			],
+			[
+				"offset",
+				"offset_y"
+			],
+			[
+				"mouse",
+				"mousewheel"
+			],
+			[
+				"came",
+				"camera"
+			],
+			[
+				"camer",
+				"camera_data"
+			],
+			[
+				"text",
+				"text_instance"
+			],
+			[
+				"b",
+				"buffer1"
+			],
+			[
+				"Te",
+				"TextBatchB"
+			],
+			[
+				"tex",
+				"texture"
+			],
+			[
+				"Text",
+				"TextBatchA"
+			],
+			[
+				"ren",
+				"render_slot"
+			],
+			[
+				"__",
+				"__removeRenderSlot"
+			],
+			[
+				"t",
+				"triangles"
+			],
+			[
+				"nu",
+				"numberOfContours"
+			],
+			[
+				"gl",
+				"glyf"
+			],
+			[
+				"get",
+				"getUint16"
+			],
+			[
+				"ta",
+				"table"
+			],
+			[
+				"updat",
+				"updateScript"
+			],
+			[
+				"st",
+				"string"
+			],
+			[
+				"bl",
+				"block_size"
+			],
+			[
+				"co",
+				"col_b"
+			],
+			[
+				"col",
+				"col_g"
+			],
+			[
+				"pos",
+				"position_y"
+			],
+			[
+				"min",
+				"min_bound_x"
+			],
+			[
+				"posi",
+				"position_y"
+			],
+			[
+				"ma",
+				"max_bound"
+			],
+			[
+				"pa",
+				"paddle"
+			],
+			[
+				"x",
+				"xmov"
+			],
+			[
+				"mo",
+				"movement"
+			],
+			[
+				"me",
+				"message_chain"
+			],
+			[
+				"tra",
+				"transform"
+			],
+			[
+				"scrip",
+				"scripts"
+			],
+			[
+				"U",
+				"UUID"
+			],
+			[
+				"set",
+				"setName"
+			],
+			[
+				"id",
+				"identifier"
+			],
+			[
+				"sc",
+				"script_type"
+			],
+			[
+				"Inpu",
+				"InputSys"
+			],
+			[
+				"message",
+				"message_subscribers"
+			],
+			[
+				"msg",
+				"msg_id"
+			],
+			[
+				"pad",
+				"paddle_init_script"
+			],
+			[
+				"padd",
+				"paddle_graphic"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"p",
+				"parent"
+			],
+			[
+				"IS",
+				"IS_CLONE"
+			],
+			[
+				"ne",
+				"next_sibling"
+			],
+			[
+				"up",
+				"updateClones"
+			],
+			[
+				"Pro",
+				"Properties"
+			],
+			[
+				"Pr",
+				"Properties"
+			],
+			[
+				"SG",
+				"SceneGraphNode"
+			],
+			[
+				"clone",
+				"clone_child"
+			],
+			[
+				"_cl",
+				"_cloneChild"
+			],
+			[
+				"clon",
+				"clone_child"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"tran",
+				"transform"
+			],
+			[
+				"ro",
+				"rotation"
+			],
+			[
+				"rende",
+				"render"
+			],
+			[
+				"m",
+				"matrix"
+			],
+			[
+				"matr",
+				"transform_matrix"
+			],
+			[
+				"S",
+				"SceneGraphHierach"
+			],
+			[
+				"cam",
+				"camera_matrix"
+			],
+			[
+				"in",
+				"includes"
+			],
+			[
+				"nex",
+				"next_sibling"
+			],
+			[
+				"name",
+				"name_hash"
+			],
+			[
+				"no",
+				"nodeEntry"
+			],
+			[
+				"act",
+				"acting_node"
+			],
+			[
+				"mat",
+				"mat44"
+			],
+			[
+				"tree",
+				"tree_pointer"
+			],
+			[
+				"UPD",
+				"UPDATE_REQUIRED"
+			],
+			[
+				"obj",
+				"objects"
+			],
+			[
+				"update",
+				"updateBoundingArea"
+			],
+			[
+				"te",
+				"text"
+			],
+			[
+				"copy",
+				"copy4"
+			],
+			[
+				"a",
+				"active_child"
+			],
+			[
+				"o",
+				"obj"
+			],
+			[
+				"reset",
+				"resetObservers"
+			],
+			[
+				"In",
+				"InstanceGenerator"
+			],
+			[
+				"fi",
+				"first_instance_observer"
+			],
+			[
+				"net",
+				"next_sibling"
+			],
+			[
+				"proto",
+				"protototype"
+			],
+			[
+				"ch",
+				"child6"
+			],
+			[
+				"child",
+				"child1"
+			],
+			[
+				"REQUI",
+				"UPDATE_REQUIRED"
+			],
+			[
+				"OR",
+				"ORIGIN_GUID"
+			],
+			[
+				"byte",
+				"bytecode"
+			],
+			[
+				"first",
+				"first_child"
+			],
+			[
+				"remo",
+				"removeNodeObserver"
+			],
+			[
+				"scr",
+				"script"
+			],
+			[
+				"node",
+				"node_script_container"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "inst",
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Install Package Control"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/systems/gl/components/uniform.js",
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/systems/gl/math/mat44.js",
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/systems/gl/components/texture.js",
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/systems/gl/components/program.js",
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/editors/dna/dna.editor.js",
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/systems/gl/primitives/primitive.js",
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/systems/render/batch/grid.batch.js",
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/systems/gl/components/camera.js",
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/systems/gl/primitives/plane.primitive.js",
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/systems/script/assembler/identifier.js",
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/objects/UUID.js",
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/systems/script/cortex/cortex.js",
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/editors/text/cursor.js",
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/systems/render/basic.renderer.js",
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/systems/gl/gl_main.js",
+		"/D/Dropbox/workspace/skch_js_alpha/alpha/js/systems/rna_stack/rna_creator.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/required/cannon.min.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/required/skch.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/pre_alpha/engine.js",
+		"/C/Users/Tech Support/Dropbox/workspace/package.json",
+		"/D/Users/Tech Support/Documents/CPP/test.cpp",
+		"/C/Users/Tech Support/Dropbox/workspace/docs/Notes/Interfaces.txt",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/objects/node/scene.node.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/global_consts.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/interface_stack/text_edit_stack.js",
+		"/C/Users/Tech Support/Dropbox/workspace/docs/Notes/Saving and loading nodes",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/traversers/save.traverser.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/objects/node/interface.node.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/database/object_db.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/objects/transforms/transform.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/compiler_types.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/backbone/backbone.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/objects/data/data.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/session/session.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/vm/virtual_machine.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/main.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/objects/data/text.data.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/input/input_handler.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/render/basic.renderer.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/objects/data/grid.data.immutable.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/objects/UUID.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/objects/render/render_slot.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/render/batch/batch.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/render/batch/grid.batch.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/traversers/update.traverser.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/objects/data/camera.data.js",
+		"/C/Users/Tech Support/Dropbox/TODO.txt",
+		"/C/Users/Tech Support/Dropbox/workspace/out/scripts/linenumber.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/lexer.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/compiler.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/assembler/equal.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/assembler/greater.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/assembler/assembler.js",
+		"/C/Users/Tech Support/Dropbox/wut dis.jpg",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/tokenizer.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/assembler/parameters.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/assembler/registers.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/assembler/expression_list.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/assembler/identifier.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/assembler/send.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/assembler/assignment.js",
+		"/C/Users/Tech Support/Dropbox/workspace/README.md",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/virtual_machine.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/message/data_handler.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/node_base.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/interpreter.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/byte_code_generator.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/assembler/declaration.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/compiler/registers.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/compiler/compiler.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/assembler/receive.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/assembler/subtraction.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/assembler/listen.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/parser.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/compiler/parser.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/render/batch/grid.textured.batch.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/memory/allocator.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/render/batch/grid.batch.textures.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/objects/data/grid.data.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/objects/data/data.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/objects/data/camera.data.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/systems/gl/gl_main.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/pre_alpha/nodes/data/grid.data.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/systems/interface_stack/text_edit_stack.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/systems/script/assembler.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/systems/backbone/backbone.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/systems/script/compiler.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/global_consts.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/systems/script/virtual_machine.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/systems/script/interpreter.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/systems/memory/allocator.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/systems/message/message.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/systems/message/data_handler.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/required/skch.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/systems/traversers/update.traverser.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/objects/node/interface.node.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/main.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/systems/traversers/traverser.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/objects/node/scene.node.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/pre_alpha/engine/frame_timer.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/pre_alpha/asm.vm/ast_definitions.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/objects/data/text.data.js",
+		"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js/systems/render/basic.renderer.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/required/ot.min.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/traversers/point_pick.traverser.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/traversers/traverser_binary.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/scratch ideas.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/traversers/click.traverser.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/interface_stack/stack.js",
+		"/C/Users/Tech Support/Dropbox/workspace/docs/grammer_0.2.md",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/objects/node/skch.node.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/render/batch/text.batch.a.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/render/batch/text.batch.b.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/script/assembler.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/objects/data/grid.data.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/memory/memory_manager.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/database/node_database.js",
+		"/C/Users/Tech Support/Dropbox/workspace/skch_library/alpha/js/systems/world/world.js",
+		"/D/Users/cinder1/Dropbox/workspace/skch_library/pre_alpha/asm.vm/vm.js",
+		"/D/Users/cinder1/Dropbox/workspace/skch_library/alpha/js/systems/interface_stack/text_edit_stack.js",
+		"/D/Users/cinder1/Dropbox/workspace/skch_library/alpha/js/objects/node/scene.node.js",
+		"/D/Users/cinder1/Dropbox/workspace/skch_library/alpha/js/systems/render/batch/text.batch.a.js",
+		"/D/Users/cinder1/Dropbox/workspace/skch_library/alpha/js/objects/transforms/transform.js",
+		"/D/Users/cinder1/Dropbox/workspace/skch_library/alpha/js/systems/interface_stack/stack.js",
+		"/D/Users/cinder1/Dropbox/workspace/skch_library/alpha/js/systems/input/input_handler.js",
+		"/D/Users/cinder1/Dropbox/workspace/skch_library/alpha/js/objects/data/text.data.js",
+		"/D/Users/cinder1/Dropbox/workspace/skch_library/alpha/js/systems/world/world.js",
+		"/F/FileHistory/cinder1/DESKTOP-U32ATC9 (4)/Data/D/Users/cinder1/Dropbox/workspace/skch_library/alpha/js/main (2016_10_15 16_41_54 UTC).js"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\Users\\Tech Support\\Dropbox\\workspace\\skch_library\\alpha\\js",
+			"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js",
+			"C:\\Users\\Tech Support\\Dropbox\\workspace\\skch_library\\alpha\\js",
+			"D:\\Users\\cinder1\\Dropbox\\workspace\\skch_library\\alpha\\js",
+			"D:\\Users\\cinder1\\Desktop\\Research\\Text\\theta-master\\src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"copyR",
+			"prospect",
+			"projection",
+			"TEXT_CURSOR",
+			"find",
+			"console.",
+			"console",
+			"pouchDB",
+			"INTERFACE",
+			"console.log",
+			"t",
+			".observer",
+			"DataHandler",
+			"datas",
+			"console.log",
+			"inRange",
+			"console",
+			"CRS",
+			"CSR",
+			"copy",
+			"console",
+			"compiler",
+			"byte_code",
+			"params",
+			"send",
+			"Send",
+			"Access",
+			"send",
+			"total_data",
+			"alloc",
+			"buffer_pointer",
+			";\n",
+			"DATA_UPDATED",
+			"console",
+			"bFlag",
+			"cons",
+			"deb",
+			"cons",
+			"co",
+			"SKCH.MSG.SIZE",
+			"MSG.SIZE",
+			"*MSG.SIZE",
+			"MSG.SIZE",
+			"]++;\n",
+			"message",
+			"if",
+			"interface",
+			".world",
+			"World",
+			"OBJ",
+			"ObjectSerialize",
+			"UUID",
+			"offset_x",
+			"MOUSEX_ABS",
+			"this.zoom",
+			"stager",
+			"transform",
+			"min_bound",
+			"createBuffer",
+			"triangles",
+			"attrib",
+			"GridBatch",
+			"_textMaterial",
+			"createRenderTarget",
+			"_target",
+			"TRANSPARENT",
+			"stencil",
+			"_target",
+			"stencil",
+			"setBlendState",
+			"setBlendSt",
+			"font",
+			"_glyphMaterial",
+			"_appendTriangle",
+			"addGlyph",
+			"_instances",
+			"addGlyph",
+			"addText",
+			"this.data",
+			"I16",
+			"engine",
+			"updateClones",
+			"copy",
+			"quat",
+			"case_",
+			"observer",
+			"SGH",
+			"acting_node",
+			"Camera",
+			"(\"../../",
+			"mat",
+			"script",
+			"Compare",
+			"ab",
+			"Text",
+			"DATA_PROTOTYPE",
+			"mat44",
+			"this.dv",
+			"Observable",
+			"0",
+			"InstanceGenerator",
+			"script",
+			"addNodeObserver",
+			"transform",
+			"resetInstance",
+			"InstanceGenerator",
+			"Node",
+			"class",
+			"babelify",
+			"Transform",
+			"script",
+			"InstanceGenerator",
+			"conso",
+			"DummyData"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			".backbone",
+			"2",
+			"1"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 130.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "jsblend.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"test",
+				"systems\\rna_stack\\text_edit_stack.js"
+			],
+			[
+				"cor",
+				"systems\\script\\cortex\\cortex.js"
+			],
+			[
+				"rna",
+				"systems\\rna_stack\\rna_creator.js"
+			],
+			[
+				"unif",
+				"systems\\gl\\components\\uniform.js"
+			],
+			[
+				"mat",
+				"systems\\gl\\math\\mat44.js"
+			],
+			[
+				"camera",
+				"systems\\gl\\components\\camera.js"
+			],
+			[
+				"grid",
+				"systems\\render\\batch\\grid.batch.js"
+			],
+			[
+				"render",
+				"systems\\render\\basic.renderer.js"
+			],
+			[
+				"gl",
+				"systems\\gl\\gl_main.js"
+			],
+			[
+				"text",
+				"systems\\gl\\components\\texture.js"
+			],
+			[
+				"texture",
+				"systems\\gl\\components\\texture.js"
+			],
+			[
+				"primi",
+				"systems\\gl\\primitives\\primitive.js"
+			],
+			[
+				"progr",
+				"systems\\gl\\components\\program.js"
+			],
+			[
+				"dna",
+				"editors\\dna\\dna.editor.js"
+			],
+			[
+				"inter",
+				"systems\\interface_stack\\interface_creator.js"
+			],
+			[
+				"sc",
+				"objects\\node\\scene.node.js"
+			],
+			[
+				"id",
+				"systems\\script\\assembler\\identifier.js"
+			],
+			[
+				"u",
+				"objects\\UUID.js"
+			],
+			[
+				"interf",
+				"systems\\interface_stack\\interface_creator.js"
+			],
+			[
+				"int",
+				"objects\\node\\interface.node.js"
+			],
+			[
+				"obj",
+				"systems\\database\\object_db.js"
+			],
+			[
+				"glo",
+				"global_consts.js"
+			],
+			[
+				"tex",
+				"systems\\interface_stack\\text_edit_stack.js"
+			],
+			[
+				"save",
+				"systems\\traversers\\save.traverser.js"
+			],
+			[
+				"sessio",
+				"systems\\session\\session.js"
+			],
+			[
+				"data",
+				"objects\\data\\data.js"
+			],
+			[
+				"back",
+				"systems\\backbone\\backbone.js"
+			],
+			[
+				"",
+				"global_consts.js"
+			],
+			[
+				"virt",
+				"systems\\script\\vm\\virtual_machine.js"
+			],
+			[
+				"te",
+				"systems\\interface_stack\\text_edit_stack.js"
+			],
+			[
+				"input",
+				"systems\\input\\input_handler.js"
+			],
+			[
+				"bac",
+				"systems\\backbone\\backbone.js"
+			],
+			[
+				"bas",
+				"systems\\render\\basic.renderer.js"
+			],
+			[
+				"main",
+				"main.js"
+			],
+			[
+				"ba",
+				"systems\\backbone\\backbone.js"
+			],
+			[
+				"re",
+				"objects\\render\\render_slot.js"
+			],
+			[
+				"batch",
+				"systems\\render\\batch\\batch.js"
+			],
+			[
+				"cam",
+				"objects\\data\\camera.data.js"
+			],
+			[
+				"rr",
+				"objects\\render\\render_slot.js"
+			],
+			[
+				"up",
+				"systems\\traversers\\update.traverser.js"
+			],
+			[
+				"batc",
+				"systems\\render\\batch\\grid.batch.js"
+			],
+			[
+				"inpu",
+				"systems\\input\\input_handler.js"
+			],
+			[
+				"textedit",
+				"systems\\interface_stack\\text_edit_stack.js"
+			],
+			[
+				"im",
+				"objects\\data\\grid.data.immutable.js"
+			],
+			[
+				"came",
+				"objects\\data\\camera.data.js"
+			],
+			[
+				"uu",
+				"objects\\UUID.js"
+			],
+			[
+				"obje",
+				"systems\\database\\object_db.js"
+			],
+			[
+				"comp",
+				"systems\\script\\compiler.js"
+			],
+			[
+				"gr",
+				"objects\\data\\grid.data.immutable.js"
+			],
+			[
+				"lexer",
+				"systems\\script\\lexer.js"
+			],
+			[
+				"equal",
+				"systems\\script\\assembler\\equal.js"
+			],
+			[
+				"gre",
+				"systems\\script\\assembler\\greater.js"
+			],
+			[
+				"asse",
+				"systems\\script\\assembler\\assembler.js"
+			],
+			[
+				"exp",
+				"systems\\script\\assembler\\expression_list.js"
+			],
+			[
+				"reg",
+				"systems\\script\\assembler\\registers.js"
+			],
+			[
+				"send",
+				"systems\\script\\assembler\\send.js"
+			],
+			[
+				"par",
+				"systems\\script\\assembler\\parameters.js"
+			],
+			[
+				"ass",
+				"systems\\script\\assembler\\assignment.js"
+			],
+			[
+				"gt",
+				"objects\\data\\grid.data.immutable.js"
+			],
+			[
+				"dat",
+				"systems\\message\\data_handler.js"
+			],
+			[
+				"node",
+				"systems\\script\\node_base.js"
+			],
+			[
+				"com",
+				"systems\\script\\compiler_types.js"
+			],
+			[
+				"ide",
+				"systems\\script\\assembler\\identifier.js"
+			],
+			[
+				"grud",
+				"objects\\data\\grid.data.immutable.js"
+			],
+			[
+				"byte",
+				"systems\\script\\byte_code_generator.js"
+			],
+			[
+				"rece",
+				"systems\\script\\assembler\\receive.js"
+			],
+			[
+				"vir",
+				"systems\\script\\vm\\virtual_machine.js"
+			],
+			[
+				"byt",
+				"systems\\script\\byte_code_generator.js"
+			],
+			[
+				"de",
+				"systems\\script\\assembler\\declaration.js"
+			],
+			[
+				"list",
+				"systems\\script\\assembler\\listen.js"
+			],
+			[
+				"edit",
+				"systems\\interface_stack\\text_edit_stack.js"
+			],
+			[
+				"parse",
+				"systems\\script\\parser.js"
+			],
+			[
+				"all",
+				"systems/memory/allocator.js"
+			],
+			[
+				"camer",
+				"objects/data/camera.data.js"
+			],
+			[
+				"glob",
+				"global_consts.js"
+			],
+			[
+				"ma",
+				"main.js"
+			],
+			[
+				"ed",
+				"systems/interface_stack/text_edit_stack.js"
+			],
+			[
+				"mess",
+				"systems/message/message.js"
+			],
+			[
+				"gir",
+				"objects/data/grid.data.js"
+			],
+			[
+				"sce",
+				"objects/node/scene.node.js"
+			],
+			[
+				"inte",
+				"objects/node/interface.node.js"
+			],
+			[
+				"upd",
+				"systems/traversers/update.traverser.js"
+			],
+			[
+				"scen",
+				"objects/node/scene.node.js"
+			],
+			[
+				"tra",
+				"systems/traversers/traverser.js"
+			],
+			[
+				"m",
+				"main.js"
+			],
+			[
+				"trav",
+				"systems\\traversers\\traverser.js"
+			],
+			[
+				"idea",
+				"scratch ideas.js"
+			],
+			[
+				"skchn",
+				"objects\\node\\skch.node.js"
+			],
+			[
+				"vm",
+				"systems\\script\\virtual_machine.js"
+			],
+			[
+				"uui",
+				"objects\\UUID.js"
+			],
+			[
+				"vi",
+				"systems\\script\\virtual_machine.js"
+			],
+			[
+				"world",
+				"systems\\world\\world.js"
+			],
+			[
+				"reder",
+				"objects/render/render_slot.js"
+			],
+			[
+				"p",
+				"objects\\properties.js"
+			],
+			[
+				"sn",
+				"objects\\node\\scene.node.js"
+			],
+			[
+				"ain",
+				"main.js"
+			],
+			[
+				"pr",
+				"objects\\properties.js"
+			],
+			[
+				"rs",
+				"objects\\node\\renderslot.node.js"
+			],
+			[
+				"st",
+				"systems\\interface_stack\\stack.js"
+			],
+			[
+				"sta",
+				"systems\\interface_stack\\test_stack.js"
+			],
+			[
+				"br",
+				"systems\\render\\basic.renderer.js"
+			],
+			[
+				"db",
+				"objects\\node\\database.node.js"
+			],
+			[
+				"ov",
+				"objects\\observer\\observable.js"
+			],
+			[
+				"ober",
+				"objects\\observer\\observer.js"
+			],
+			[
+				"sk",
+				"objects\\node\\skch.node.js"
+			],
+			[
+				"obser",
+				"objects\\observer\\observable.js"
+			],
+			[
+				"scne",
+				"objects\\node\\scene.node.js"
+			],
+			[
+				"tr",
+				"systems\\traversers\\traverser.js"
+			],
+			[
+				"interfa",
+				"systems\\interface_stack\\test_stack.js"
+			],
+			[
+				"skch",
+				"objects\\node\\skch.node.js"
+			],
+			[
+				"rsl",
+				"objects\\node\\renderslot.node.js"
+			],
+			[
+				"pi",
+				"systems\\traversers\\point_pick.traverser.js"
+			],
+			[
+				"stack",
+				"systems\\interface_stack\\stack.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 96.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
