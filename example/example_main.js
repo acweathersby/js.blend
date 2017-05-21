@@ -14,25 +14,17 @@ window.onload = function() {
         renderer.render(scene, camera);
     }
 
-    var geometry = new THREE.BoxGeometry(1, 1, 1);
-    var material = new THREE.MeshPhongMaterial({
-        color: 0x00ff00
-    });
-    var cube = new THREE.Mesh(geometry, material);
-    // scene.add(cube);
+    camera.rotation.x = 89;
+    camera.position.z = 1;
 
-    camera.position.z = 5;
-
-    var light = new THREE.PointLight(0xFFFFFF, 1, 100);
-    light.position.set(10, 10, 2);
+    var light = new THREE.PointLight(0xFFFFFF, 0.8, 1000);
+    light.position.set(0, 0, 10);
+    light.shadow = null;
     scene.add(light);
 
-    var light = new THREE.PointLight(0xFFFFFF, 0.7, 100);
-    light.position.set(-10, 10, 5);
-    scene.add(light);
-
-    var light = new THREE.PointLight(0xFFFFFF, 0.5, 100);
-    light.position.set(0, 10, 8);
+    var light = new THREE.PointLight(0xFFFFFF, 0.8, 0);
+    light.position.set(0, 0, -10);
+    light.shadow = null;
     scene.add(light);
 
 
@@ -58,7 +50,7 @@ window.onload = function() {
     });
 
     function handleScrollWheel(x) {
-        camera.position.z -= x * 0.005;
+        camera.position.y -= x * 0.005;
     }
     //Firefox scroll listener
     window.addEventListener("DOMMouseScroll", function(e) {
@@ -89,64 +81,147 @@ window.onload = function() {
         return false;
     });
 
-    blend_parser.onParseReady = function(parsed_blend_file) {
-      console.log(parsed_blend_file)
-      for(var u = 0; u < parsed_blend_file.objects.Mesh.length; u++){
-        e = parsed_blend_file.objects.Mesh[u];
-        console.log(e.id.name);
-        console.log((e.id.name = "tod"));
-        console.log(e.id.name);
-        //Getting model info out of mesh object
-        var faces = e.mpoly,
-            loops = e.mloop,
-            UV = e.mloopuv || null,
-            verts = e.mvert,
+    var blender_types = {
+        mesh_object: 1,
+    };
+
+    function createThreeJSGeometry(blender_mesh, origin) {
+
+        let mesh = blender_mesh,
+            faces = mesh.mpoly,
+            loops = mesh.mloop,
+            UV = mesh.mloopuv || null,
+            verts = mesh.mvert,
             vert_array = [],
             face_array = [],
-            uv_array = [];
-        if (!faces) return;
+            uv_array = [],
+            normal_array = [];
+
+        origin[0] //-= mesh.loc[0];
+        origin[1] //-= mesh.loc[1];
+        origin[2] //-= mesh.loc[2];
+
+        if (!faces) return null;
+
         var geometry = new THREE.Geometry();
+
         var index_count = 0;
+        
+        for(var i = 0; i < verts.length; i++){
+            let vert = verts[i];
+            vert_array.push(new THREE.Vector3(vert.co[0]+origin[0],vert.co[1]+origin[1],vert.co[2]+origin[2]));
+        }
+
         for (var i = 0; i < faces.length; i++) {
             var face = faces[i] || faces;
             var len = face.totloop;
             var start = face.loopstart;
             var indexi = 1;
 
+            geometry.blend_mat = face.mat_nr;
+
             while (indexi < len) {
+                var face_normals = [];
+                var face_index_array = [];
+                let index = 0;
+
                 for (var l = 0; l < 3; l++) {
-                    if ((indexi - 1) + (1 * l) < len) {
-                        index = start + (indexi - 1) + (1 * l);
+                    //Per Vertice 
+
+                    if ((indexi - 1) + l < len) {
+                        index = start + (indexi - 1) + l;
                     } else {
                         index = start;
                     }
+
                     var v = loops[index].v;
                     var vert = verts[v];
+
+                    face_index_array.push(v);
+
                     index_count++;
-                    vert_array.push(new THREE.Vector3(vert.co[0], vert.co[2], -vert.co[1]));
+
+                    //get normals, which are 16byte ints, and norm them back into floats ;)
+
+                    var
+                        n1 = vert.no[0],
+                        n2 = vert.no[1],
+                        n3 = vert.no[2];
+
+                    var nl = 1;Math.sqrt((n1 * n1) + (n2 * n2) + (n3 * n3));
+
+                    face_normals.push(new THREE.Vector3(n1/nl, n2/nl, n3/nl));
+
                     if (UV) {
                         var uv = UV[index].uv;
                         uv_array.push(uv[0], uv[1]);
                     }
                 }
-                face_array.push(new THREE.Face3(index_count - 3, index_count - 2, index_count - 1));
+                face_array.push(new THREE.Face3(
+                    face_index_array[0], face_index_array[1], face_index_array[2],
+                    face_normals
+                ));
+
                 indexi += 2;
             }
         }
 
         geometry.vertices = vert_array;
         geometry.faces = face_array;
-        geometry.computeBoundingSphere();
-        geometry.mergeVertices();
-        geometry.computeFaceNormals();
+        
+        //Well, using blender file normals does not work. Will need to investigate why normals from the blender file do not provide correct results. 
+        //For now, have Three calculate normals. 
+       geometry.computeVertexNormals();
+        
+        return geometry;
+    };
 
-        var material = new THREE.MeshPhongMaterial({
-            color: 0xff0000
-        });
+    function createThreeJSMaterial(blend_mat) {
+        var material = new THREE.MeshPhongMaterial();
+        material.color.setRGB(blend_mat.r, blend_mat.g, blend_mat.b);
+        //material.color.setRGB(3, 2, 1);
+        material.specular.setRGB(blend_mat.specr, blend_mat.specg, blend_mat.specb);
+        material.shininess = blend_mat.spec;
+        material.reflectivity = blend_mat.ref;
+        return material;
+    }
 
-        scene.add(new THREE.Mesh(geometry, material));
+    blend_parser.onParseReady = function(parsed_blend_file) {
 
-      }
+        var materials = [];
+        if(parsed_blend_file.objects.Material){    
+            for (var i = 0; i < parsed_blend_file.objects.Material.length; i++) {
+                var mat = createThreeJSMaterial(parsed_blend_file.objects.Material[i]);
+
+                materials.push(mat);
+            }
+        }
+
+        //build object from blender mesh object
+        for (let i = 0; i < parsed_blend_file.objects.Object.length; i++) {
+            let obj = parsed_blend_file.objects.Object[i];
+
+            if (obj.type == blender_types.mesh_object) {
+                if (obj.data) {
+                    //get the mesh 
+                    console.log(obj.orig)
+                    var geometry = createThreeJSGeometry(obj.data, [0,0,0]);
+
+                    //create a transform from the mesh object
+                    var mesh = new THREE.Mesh(geometry, materials[0]);
+                    console.log(materials[0])
+                    scene.add(mesh);
+
+                    mesh.rotateZ(obj.rot[2])//*180/Math.PI;
+                    mesh.rotateY(obj.rot[1])//*180/Math.PI;
+                    mesh.rotateX(obj.rot[0])//*180/Math.PI;
+                    mesh.scale.fromArray(obj.size, 0);
+                    mesh.position.fromArray([obj.loc[0], (obj.loc[1]), (obj.loc[2])], 0);
+
+                    console.log(obj.aname, obj.loc, obj.orig, obj.rot, obj.size, obj)
+                }
+            }
+        }
     };
     render();
 
