@@ -86,8 +86,18 @@ window.onload = function() {
     };
 
     function createThreeJSGeometry(blender_mesh, origin) {
+        //get materials
+        var mats = blender_mesh.mat, materials = [];
+        for(var i = 0; i < mats.length; i++){
+            var material = createThreeJSMaterial(mats[i]);
+            materials.push(material);
+        }
 
-        let mesh = blender_mesh,
+
+
+
+        let pick_material = 0;
+            mesh = blender_mesh,
             faces = mesh.mpoly,
             loops = mesh.mloop,
             UV = mesh.mloopuv || null,
@@ -97,13 +107,10 @@ window.onload = function() {
             uv_array = [],
             normal_array = [];
 
-        origin[0] //-= mesh.loc[0];
-        origin[1] //-= mesh.loc[1];
-        origin[2] //-= mesh.loc[2];
-
-        if (!faces) return null;
-
         var geometry = new THREE.Geometry();
+
+        if (!faces) return geometry;
+
 
         var index_count = 0;
         
@@ -118,7 +125,7 @@ window.onload = function() {
             var start = face.loopstart;
             var indexi = 1;
 
-            geometry.blend_mat = face.mat_nr;
+            pick_material = face.mat_nr;
 
             while (indexi < len) {
                 var face_normals = [];
@@ -165,7 +172,7 @@ window.onload = function() {
                 indexi += 2;
             }
         }
-
+        geometry.blend_mat = materials[pick_material];
         geometry.vertices = vert_array;
         geometry.faces = face_array;
         
@@ -188,6 +195,7 @@ window.onload = function() {
 
     blend_parser.onParseReady = function(parsed_blend_file) {
 
+
         var materials = [];
         if(parsed_blend_file.objects.Material){    
             for (var i = 0; i < parsed_blend_file.objects.Material.length; i++) {
@@ -200,6 +208,7 @@ window.onload = function() {
         //build object from blender mesh object
         for (let i = 0; i < parsed_blend_file.objects.Object.length; i++) {
             let obj = parsed_blend_file.objects.Object[i];
+            console.log(obj);
 
             if (obj.type == blender_types.mesh_object) {
                 if (obj.data) {
@@ -208,7 +217,7 @@ window.onload = function() {
                     var geometry = createThreeJSGeometry(obj.data, [0,0,0]);
 
                     //create a transform from the mesh object
-                    var mesh = new THREE.Mesh(geometry, materials[0]);
+                    var mesh = new THREE.Mesh(geometry, geometry.blend_mat || materials[0]);
                     console.log(materials[0])
                     scene.add(mesh);
 
