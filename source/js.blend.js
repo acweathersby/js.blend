@@ -1,4 +1,13 @@
+sDNA_Struct_Properties = {
+
+}
+
 var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
+    //A helper object to identify Blender Object structs by type name. 
+    var blender_types = {
+        mesh_object: 1,
+    };
+
 
     //web worker not functional in this version
     USE_WEBWORKER = false;
@@ -52,7 +61,6 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
             _data = null,
             BIG_ENDIAN = false,
             pointer_size = 0,
-            memory_lookup = {},
             struct_names = [],
             offset = 0,
             working_blend_file = null,
@@ -70,7 +78,6 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
                 data = null;
                 BIG_ENDIAN = false;
                 pointer_size = 0;
-                memory_lookup = {};
                 struct_names = [];
                 offset = 0;
                 working_blend_file = null;
@@ -109,6 +116,7 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
             this.byte = new Uint8Array(AB);
 
             this.objects = {};
+            this.memory_lookup = {},
             this.object_array = [];
 
             this.template = null;
@@ -222,8 +230,17 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
             };
         }
 
+        function pointer64Prop(offset, Array_match, length){
+
+        }
+
+        function pointer32Prop(offset, Array_math, length){
+
+        }
+
+
         //Store final DNA structs
-        var MASTER_SDNA_TEMPLATE = function(version) {
+        var MASTER_SDNA_SCHEMA = function(version) {
             this.version = version;
             this.SDNA_SET = false;
             this.byte_size = 0;
@@ -231,9 +248,7 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
             this.structs = {};
             this.SDNA = {};
         };
-        var temp_types = {};
-
-        MASTER_SDNA_TEMPLATE.prototype = {
+        MASTER_SDNA_SCHEMA.prototype = {
             getSDNAStructureConstructor: function(name, struct) {
                 if (struct) {
                     var blen_struct = Function("function " + name + "(){}; return " + name)();
@@ -275,10 +290,6 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
                         };
 
                         if (!Pointer_Match) {
-                            if(!temp_types[type]){
-                                temp_types[type] = type;
-                                console.log(temp_types)
-                            }
                             switch (type) {
                                 case "double":
                                     Object.defineProperty(blen_struct.prototype, _name, float64Prop(offset, Array_match, length >> 3));
@@ -339,12 +350,29 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
         /*
             Returns a pre-constructed BLENDER_STRUCTURE or creates a new BLENDER_STRUCTURE to match the DNA struct type
         */
+        var pointer_function = (pointer)=>()=>{return FILE.memory_lookup[pointer]};
+        
+        function getPointer(offset){
+                var pointerLow = data.getUint32(offset, BIG_ENDIAN);
+            if(pointer_size > 4){
+                var pointerHigh = data.getUint32(offset+4, BIG_ENDIAN);
+
+                if(BIG_ENDIAN){
+                    return  (pointerLow) +""+ pointerHigh;
+                }else{
+                    return  (pointerHigh) +""+ pointerLow;
+                }
+            }else{
+                return pointerLow;
+            }
+            
+        }
 
         BLENDER_STRUCTURE.prototype = {
             setArrays: function(BLENDER_FILE) {
                 this.blender_file = BLENDER_FILE;
             },
-            setData: function(_data_offset, data_block_length, BLENDER_FILE) {
+            setData: function(pointer, _data_offset, data_block_length, BLENDER_FILE) {
                 if(this.__list == null) return this;
                 BLENDER_FILE.addObject(this);
 
@@ -367,6 +395,7 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
                     Array_match = struct[i + 4];
                     Pointer_Match = struct[i + 5];
                     offset = this.pointer + struct[i + 3];
+                    
                     if (Pointer_Match) {
                         if (Array_match) {
                             this[name] = [];
@@ -375,25 +404,25 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
                                 if (offset + pointer_size > data_block_length) {
                                     return this;
                                 }
-
-                                this[name].push(data.getFloat64(offset, BIG_ENDIAN));
+                                this[name].push(BLENDER_FILE.memory_lookup[getPointer(offset)]);
+                                offset += pointer_size;
                                 j++;
                             }
                         } else {
                             if (offset + pointer_size > data_block_length) {
                                 return this;
                             }
-                            this[name] = (data.getFloat64(offset, BIG_ENDIAN));
+
+                            Object.defineProperty(this, name, {get:pointer_function(getPointer(offset))})
                         }
                         continue;
-                    }
-                    if (Array_match) {
+                    }else if (Array_match) {
                         this[name] = [];
                         j = 0;
                         while (j < Array_match) {
                             if (current_SDNA_template.getSDNAStructureConstructor(type)) {
                                 constructor = current_SDNA_template.getSDNAStructureConstructor(type);
-                                this[name].push((new constructor()).setData(offset, offset + length / Array_match, BLENDER_FILE));
+                                this[name].push((new constructor()).setData(0, offset, offset + length / Array_match, BLENDER_FILE));
                             } else this[name].push(null);
                             offset += length / Array_match;
                             j++;
@@ -401,7 +430,7 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
                     } else {
                         if (current_SDNA_template.getSDNAStructureConstructor(type)) {
                             constructor = current_SDNA_template.getSDNAStructureConstructor(type);
-                            this[name] = (new constructor()).setData(offset, length + offset, BLENDER_FILE);
+                            this[name] = (new constructor()).setData(0, offset, length + offset, BLENDER_FILE);
                         } else this[name] = null;
                     }
                 }
@@ -409,9 +438,11 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
                 this.__list = null;
                 return this;
             },
+
             getPointer: function(address) {
                 return memory_lookup[address] || null;
             },
+
             setPointers: function() {
                 var E = this;
 
@@ -428,7 +459,6 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
                 }
             },
             get aname() {
-                debugger
                 if (this.id) return this.id.name.slice(2);
                 else return undefined;
             }
@@ -437,7 +467,6 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
         function toString(buffer, _in, _out) {
             return String.fromCharCode.apply(String, new Uint8Array(buffer, _in, _out - _in));
         }
-        var pointer_hash_table = {};
         //Begin parsing blender file
         function readFile() {
             var count = 0;
@@ -451,14 +480,16 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
             var curr_count = 0;
             var curr_count2 = 0;
 
-            memory_lookup = {};
+            FILE.memory_lookup = {};
             struct_names = [];
             offset = 0;
 
             // Make sure we have a .blend file. All blend files have the first 12bytes
             // set with BLENDER-v### in Utf-8
-            if (toString(_data, offset, 7) !== "BLENDER") return null;
+            if (toString(_data, offset, 7) !== "BLENDER") return console.warn("File supplied is not a .blend compatible file.");
+            
             // otherwise get templete from save version.
+            
             offset += 7;
             pointer_size = ((toString(_data, offset++, offset)) == "_") ? 4 : 8;
             BIG_ENDIAN = toString(_data, offset++, offset) !== "V";
@@ -467,7 +498,7 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
 
             //create new master template if none exist for current blender version;
             if (!templates[version]) {
-                templates[version] = new MASTER_SDNA_TEMPLATE(version);
+                templates[version] = new MASTER_SDNA_SCHEMA(version);
             }
 
             current_SDNA_template = templates[version];
@@ -476,8 +507,12 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
 
             offset += 3;
 
-            //set SDNA structs if template hasn't been set.
+            //Set SDNA structs if template hasn't been set.
+            //Todo: Move the following block into the MASTER_SDNA_SCHEMA object.
+            //*Like so:*/ current_SDNA_template.set(AB);
+
             if (!current_SDNA_template.SDNA_SET) {
+
                 //find DNA1 data block
                 offset2 = offset;
 
@@ -588,17 +623,20 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
                     offset2 += block_length;
                 }
             }
-
-            FILE.primeTypes(current_SDNA_template.SDNA_NAMES);
+            
+            //What does this do? 
+            
+            // FILE.primeTypes(current_SDNA_template.SDNA_NAMES);
+            
+            // Nothing, that's what.
 
             //parse the rest of the data, starting back at the top.
+            //TODO: turn into on-demand parsing.
+
             while (true) {
                 if ((offset % 4) > 0) {
                     offset = (4 - (offset % 4)) + offset;
                 }
-
-
-                pointer_hash_table[data.getFloat64(offset + 8, BIG_ENDIAN) + ""] = offset;
 
                 data_offset = offset;
                 sdna_index = data.getInt32(offset + pointer_size + 8, BIG_ENDIAN);
@@ -616,6 +654,7 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
                     //Create a Blender object using a constructor template from current_SDNA_template
                     var data_start = data_offset + pointer_size + 16;
                     
+                   // if(current_SDNA_template.SDNA_NAMES[sdna_index] == "Link") debugger
                     //Get a SDNA constructor by name;
                     var constructor = current_SDNA_template.getSDNAStructureConstructor(current_SDNA_template.SDNA_NAMES[sdna_index]);
                     
@@ -628,30 +667,28 @@ var jsblend = (function(USE_WEBWORKER, UNUSED_NETWORK_PORT) {
                         
                         var length = constructor.prototype._length;
                         
-                        obj.setData(data_start, data_start + size, FILE);
                         
-                        var address = data.getFloat64(data_offset + 8, BIG_ENDIAN);
+                        var address = getPointer(data_offset+8);
+                        
                         obj.address = address + "";
+
+                        obj.setData(address, data_start, data_start + size, FILE);
                     
                         if (count > 1) {
                             let array = [];
                             array.push(obj);
                             for (var u = 1; u < count; u++) {
                                 obj = new constructor();
-                                obj.setData(data_start + length * u, data_start + (length * u) + length, FILE);
+                                obj.setData(address, data_start + length * u, data_start + (length * u) + length, FILE);
                                 array.push(obj);
                             }
-                            memory_lookup[address + ""] = array;
+                            FILE.memory_lookup[address] = array;
                         } else {
-                            memory_lookup[address + ""] = obj;
+                            FILE.memory_lookup[address] = obj;
                         }
                     }
                 }
             }
-
-            FILE.setPointers();
-
-            memory_lookup = null;
         }
     }
     return return_object;

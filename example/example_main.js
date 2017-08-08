@@ -159,6 +159,8 @@ window.onload = function() {
 
                     face_normals.push(new THREE.Vector3(n1/nl, n2/nl, n3/nl));
 
+
+                    console.log(index, UV)
                     if (UV) {
                         var uv = UV[index].uv;
                         uv_array.push(uv[0], uv[1]);
