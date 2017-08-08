@@ -41,18 +41,16 @@ module.exports = function createThreeJSTexture(image) {
 
             let img = new Image();
 
-            document.body.appendChild(img);
-
             img.src = dataURI;
 
             texture = new THREE.Texture(img);
 
             img.onload = () => {
                 texture.needsUpdate = true;
-            }
+            };
 
             blender_texture_cache[name] = texture;
         }
     }
     return texture;
-}
+};
