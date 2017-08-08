@@ -1,0 +1,27 @@
+{
+  "name": "jsblend",
+  "version": "0.1.0",
+  "description": "A Blender to Javascript File Reader",
+  "main": "./build/jsblend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Blender",
+    "ThreeJS"
+  ],
+  "author": "Anthony C Weathersby",
+  "license": "ISC",
+  "dependencies": {
+    "base64-js": "^1.2.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Galactrax/js.blend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Galactrax/js.blend/issues"
+  },
+  "homepage": "https://github.com/Galactrax/js.blend#readme"
+}
