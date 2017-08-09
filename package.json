@@ -1,6 +1,6 @@
 {
   "name": "jsblend",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Blender to Javascript File Reader",
   "main": "./build/jsblend.js",
   "scripts": {

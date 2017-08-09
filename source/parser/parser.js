@@ -308,11 +308,12 @@ module.exports  = (function(unzipper) {
                     if (Blender_Array_Length > 1) {
                         let array = [];
                         let j = 0;
+                        let off = offset;
                         while (j < Blender_Array_Length) {
-                            let pointer = this.__blender_file__.getPointer(this.__data_address__ + offset, this.__blender_file__);
+                            let pointer = this.__blender_file__.getPointer(this.__data_address__ + off, this.__blender_file__);
 
                             array.push(this.__blender_file__.memory_lookup[pointer]);
-                            offset += length ///this.__blender_file__.template.pointer_size;
+                            off += length ///this.__blender_file__.template.pointer_size;
                             j++;
                         }
 

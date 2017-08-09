@@ -76,8 +76,8 @@ module.exports = function createThreeJSBufferGeometry(blender_mesh, origin) {
 
                 if (UV) {
                     var uv = UV[index].uv;
-                    uv_buffer[index_count * 2 + 0] = 1 - uv[1];
-                    uv_buffer[index_count * 2 + 1] = uv[0];
+                    uv_buffer[index_count * 2 + 0] = uv[0];
+                    uv_buffer[index_count * 2 + 1] = uv[1];
                 }
 
                 index_count++;
