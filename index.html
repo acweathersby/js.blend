@@ -38,8 +38,7 @@
 			//scene.add(light);
 
 			JSBLEND('./example/test.blend').then((blend) => {
-				console.log(blend);
-	        	//blend.three.loadScene(scene);
+	        	blend.three.loadScene(scene);
 	       		render();
 	    	}).catch((error)=>{
 	    		console.log(error);
