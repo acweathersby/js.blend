@@ -24,15 +24,16 @@ module.exports = function createThreeJSLamp(blend_lamp) {
 		case blender_light_types.point:
 			var three_light = new THREE.PointLight(color, intesity, distance);
 			three_light.position.fromArray(pos_array, 0);
+			three_light.castShadow = true;
 			break;
 		case blender_light_types.sun:
 			var three_light = new THREE.PointLight(color, intesity, distance);
 			three_light.position.fromArray(pos_array, 0);
 			three_light.castShadow = true;
-			three_light.shadow.mapSize.width = 2048;
-			three_light.shadow.mapSize.height = 2048;
+			three_light.shadow.mapSize.width = 1024;
+			three_light.shadow.mapSize.height = 1024;
 			three_light.shadow.camera.near = 0.01;
-			three_light.shadow.camera.far = 128;
+			three_light.shadow.camera.far = 500;
 			break;
 	}
 

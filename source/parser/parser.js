@@ -3,13 +3,9 @@
 const DNA1 = 826363460;
 const ENDB = 1111772741;
 
-/* Note: Blender cooridinates treat the Z axis as the verticle and  Y as depth. */
-module.exports  = (function(unzipper) {
-    //A helper object to identify Blender Object structs by type name. 
-    var blender_types = {
-        mesh_object: 1,
-        lamp: 10,
-    };
+/* Note: Blender coordinates treat the Z axis as the vertical an Y as depth. */
+
+module.exports = (function(unzipper) {
 
     //web worker not functional in this version
     USE_WEBWORKER = false;
@@ -59,10 +55,13 @@ module.exports  = (function(unzipper) {
             templates = {},
             finished_objects = [],
             FILE = null,
+            ERROR = null,
             AB = null;
 
         function parseFile(msg) {
+            
             var self = this;
+            
             if (typeof msg.data == "object") {
                 // reset global variables
                 AB = null;
@@ -90,7 +89,7 @@ module.exports  = (function(unzipper) {
                 readFile();
 
                 //export parsed data
-                self.postMessage(FILE);
+                self.postMessage(FILE, ERROR);
             }
         }
 
@@ -118,11 +117,7 @@ module.exports  = (function(unzipper) {
                 if (!this.objects[obj.blender_name]) this.objects[obj.blender_name] = [];
                 this.objects[obj.blender_name].push(obj);
             },
-            primeTypes: function(list_of_dna_names) {
-                for (var i = 0; i < list_of_dna_names.length; i++) {
-                    //this.objects[list_of_dna_names[i]] = [];
-                }
-            },
+
             getPointer: function(offset) {
                 var pointerLow = this.dv.getUint32(offset, this.template.endianess);
                 if (this.template.pointer_size > 4) {
@@ -137,10 +132,6 @@ module.exports  = (function(unzipper) {
                 }
             }
         };
-
-        function getDocument(data) {
-            var obj = readFile(null, data);
-        }
 
         self.onmessage = parseFile;
         this.onmessage = parseFile;
@@ -238,8 +229,7 @@ module.exports  = (function(unzipper) {
                     }
                 },
             };
-        }
-
+        };
 
         function charProp(offset, Blender_Array_Length, length) {
             return {
@@ -251,7 +241,7 @@ module.exports  = (function(unzipper) {
 
                         while (this.__blender_file__.byte[end] != 0 && buffer_guard++ < length) end++;
 
-                        return toString(this.__blender_file__.AB, start, end)
+                        return toString(this.__blender_file__.AB, start, end);
                     }
                     return this.__blender_file__.byte[(this.__data_address__ + offset)];
                 },
@@ -291,7 +281,7 @@ module.exports  = (function(unzipper) {
                             let obj = this.__blender_file__.memory_lookup[pointer];
                             if (!obj) break;
                             results.push(obj);
-                            j++
+                            j++;
                         }
 
                     };
@@ -299,7 +289,7 @@ module.exports  = (function(unzipper) {
                     return results;
                 },
                 set: function() {}
-            }
+            };
         }
 
         function pointerProp(offset, Blender_Array_Length, length) {
@@ -313,7 +303,7 @@ module.exports  = (function(unzipper) {
                             let pointer = this.__blender_file__.getPointer(this.__data_address__ + off, this.__blender_file__);
 
                             array.push(this.__blender_file__.memory_lookup[pointer]);
-                            off += length ///this.__blender_file__.template.pointer_size;
+                            off += length;
                             j++;
                         }
 
@@ -324,7 +314,7 @@ module.exports  = (function(unzipper) {
                     }
                 },
                 set: function() {}
-            }
+            };
         }
 
         function compileProp(obj, name, type, offset, array_size, IS_POINTER, pointer_size, length) {
@@ -458,10 +448,10 @@ module.exports  = (function(unzipper) {
                                     return function() {
                                         var array = [];
                                         for (var i = 0; i < array_names.length; i++) {
-                                            array.push(this[array_names[i]])
+                                            array.push(this[array_names[i]]);
                                         }
                                         return array;
-                                    }
+                                    };
                                 })(array_names)
                             });
                         } else {
@@ -498,7 +488,7 @@ module.exports  = (function(unzipper) {
             Returns a pre-constructed BLENDER_STRUCTURE or creates a new BLENDER_STRUCTURE to match the DNA struct type
         */
         var pointer_function = (pointer) => () => {
-            return FILE.memory_lookup[pointer]
+            return FILE.memory_lookup[pointer];
         };
 
         function getPointer(offset) {
@@ -518,7 +508,7 @@ module.exports  = (function(unzipper) {
 
         BLENDER_STRUCTURE.prototype = {
             setData: function(pointer, _data_offset, data_block_length, BLENDER_FILE) {
-                if (this.__list__ == null) return this;
+                if (this.__list__ === null) return this;
                 BLENDER_FILE.addObject(this);
 
                 this.__blender_file__ = BLENDER_FILE;
@@ -575,6 +565,7 @@ module.exports  = (function(unzipper) {
         }
 
         //Begin parsing blender __blender_file__
+
         function readFile() {
             var count = 0;
             var offset2 = 0;
@@ -593,7 +584,7 @@ module.exports  = (function(unzipper) {
 
             // Make sure we have a .blend __blender_file__. All blend files have the first 12bytes
             // set with BLENDER-v### in Utf-8
-            if (toString(_data, offset, 7) !== "BLENDER") return console.warn("File supplied is not a .blend compatible Blender file.");
+            if (toString(_data, offset, 7) !== "BLENDER") return ERROR = "File supplied is not a .blend compatible Blender file.";
 
             // otherwise get templete from save version.
 
@@ -733,6 +724,7 @@ module.exports  = (function(unzipper) {
             }
 
             //parse the rest of the data, starting back at the top.
+
             //TODO: turn into "on-demand" parsing.
 
             while (true) {

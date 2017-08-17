@@ -1,0 +1,1535 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ta",
+				"tabindex\tAttr"
+			],
+			[
+				"Mouse",
+				"MouseMoveR"
+			],
+			[
+				"pos",
+				"position_y"
+			],
+			[
+				"la",
+				"last_y"
+			],
+			[
+				"IS",
+				"IS_CAMERA"
+			],
+			[
+				"DA",
+				"DataObject"
+			],
+			[
+				"msg",
+				"msg_synch"
+			],
+			[
+				"Da",
+				"DataObject"
+			],
+			[
+				"JS",
+				"JSBLEND"
+			],
+			[
+				"model",
+				"model_name"
+			],
+			[
+				"cre",
+				"createModel"
+			],
+			[
+				"load",
+				"loadFile"
+			],
+			[
+				"fil",
+				"filename_or_filedata"
+			],
+			[
+				"thre",
+				"three_module"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"vert",
+				"vert_array"
+			],
+			[
+				"face",
+				"face_array"
+			],
+			[
+				"ad",
+				"adjust"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"clip",
+				"clip-path"
+			],
+			[
+				"scro",
+				"scroll_top"
+			],
+			[
+				"bord",
+				"border-width"
+			],
+			[
+				"po",
+				"project"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"in",
+				"inherit"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"spa",
+				"space-around"
+			],
+			[
+				"flex",
+				"flex-grow"
+			],
+			[
+				"fl",
+				"flex-shrink"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"fill",
+				"fillRect"
+			],
+			[
+				"onmouse",
+				"onmouseenter\tAttr"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"gala",
+				"galactrax-orange"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"gal",
+				"galactrax-dark-gray"
+			],
+			[
+				"ti",
+				"ticket"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"gra",
+				"grabs"
+			],
+			[
+				"g",
+				"grab"
+			],
+			[
+				"inn",
+				"innerWidth"
+			],
+			[
+				"c",
+				"card"
+			],
+			[
+				"vec",
+				"vecBHori"
+			],
+			[
+				"card",
+				"cardA"
+			],
+			[
+				"ca",
+				"cards"
+			],
+			[
+				"n",
+				"null"
+			],
+			[
+				"conast",
+				"constraints"
+			],
+			[
+				"phys",
+				"physier_math"
+			],
+			[
+				"ph",
+				"physiCard"
+			],
+			[
+				"phy",
+				"physiPoint"
+			],
+			[
+				"get",
+				"getPosX"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"const",
+				"constraints"
+			],
+			[
+				"arra",
+				"array"
+			],
+			[
+				"physi",
+				"physiCard"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"array",
+				"array2"
+			],
+			[
+				"ro",
+				"rotation2"
+			],
+			[
+				"rota",
+				"rotation"
+			],
+			[
+				"r",
+				"rg"
+			],
+			[
+				"set",
+				"setGB"
+			],
+			[
+				"cli",
+				"clientY"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"gr",
+				"grab_conns"
+			],
+			[
+				"p",
+				"physiPoint"
+			],
+			[
+				"physC",
+				"physiConn"
+			],
+			[
+				"ref",
+				"RefP"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"scroll",
+				"scrollX"
+			],
+			[
+				"app",
+				"applyX"
+			],
+			[
+				"view",
+				"view_field"
+			],
+			[
+				"phsi",
+				"phsiPoint"
+			],
+			[
+				"__p",
+				"__py"
+			],
+			[
+				"t_",
+				"t_x"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"link",
+				"linkFunction"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"__sca",
+				"__scale_dest__"
+			],
+			[
+				"space",
+				"space-between"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"overflow",
+				"overflow"
+			],
+			[
+				"__",
+				"__scale_dest__"
+			],
+			[
+				"op",
+				"__opacity_dest__"
+			],
+			[
+				"opa",
+				"__opacity_dest___"
+			],
+			[
+				"sca",
+				"__scale_dest___"
+			],
+			[
+				"al",
+				"alphac"
+			],
+			[
+				"scal",
+				"scalec"
+			],
+			[
+				"cu",
+				"cubicCurve"
+			],
+			[
+				"scr",
+				"scroll_y"
+			],
+			[
+				"sc",
+				"scroll_y"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"de",
+				"deactivate"
+			],
+			[
+				"wa",
+				"warp_kernel"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"px",
+				"px_dest"
+			],
+			[
+				"wind",
+				"window_center_y"
+			],
+			[
+				"update",
+				"updateView"
+			],
+			[
+				"Warp",
+				"WarpView"
+			],
+			[
+				"ha",
+				"warpfield_hash"
+			],
+			[
+				"War",
+				"warpfield"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"mata",
+				"material"
+			],
+			[
+				"mater",
+				"materials"
+			],
+			[
+				"ble",
+				"blender_mesh"
+			],
+			[
+				"_dat",
+				"__data_address__"
+			],
+			[
+				"blen",
+				"blend_mat"
+			],
+			[
+				"Po",
+				"PointerToArray"
+			],
+			[
+				"or",
+				"original_name"
+			],
+			[
+				"DNA",
+				"DNA1"
+			],
+			[
+				"Ar",
+				"Array_match"
+			],
+			[
+				"char",
+				"char_offset"
+			],
+			[
+				"bi",
+				"BIG_ENDIAN"
+			],
+			[
+				"poi",
+				"pointer_size"
+			],
+			[
+				"poit",
+				"pointer64Prop"
+			],
+			[
+				"point",
+				"pointer_size"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Install Package Control"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"subl",
+			"suble",
+			"sible",
+			"open ./*",
+			"open /*",
+			"open *",
+			"open /?",
+			"open ?",
+			"open",
+			"cd ",
+			"dir",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/render/batch/grid.batch.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/reference/pre_alpha/nodes/data/grid.data.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/objects/data/camera.data_redux.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/cerebel/cerebel_redux.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/traversers/rna.traverser_redux.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/objects/data/grid.data.immutable_redux.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/traversers/rna.traverser.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/script/compiler_redux.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/traversers/update.traverser.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/rna_stack/stack.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/cerebel/cerebel.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/objects/data/grid.data.immutable.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/index.html",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/render/batch/text.batch.a.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/database/object_db_redux.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/editors/dna/dna.editor.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/objects/data/data.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/objects/data/data_redux.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/render/basic.renderer.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/traversers/update.traverser_redux.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/objects/data/text.data_redux.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/editors/dna/dna.editor_redux.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/traversers/traverser_redux.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/objects/cell_redux.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/script/assembler/number.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/script/cortex/cortex.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/reference/alpha/js/systems/cerebel/cerebel.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/input/input_handler_redux.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/render/basic.renderer_redux.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/script/assembler/vector.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/script/ast_definitions.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/script/assembler/assembler.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/main.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/rna_stack/rna_creator.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/rna_stack/rna_creator_redux.js",
+		"/C/Users/Galavtrax/Gdrive/workbench/skch_js_alpha/source/systems/database/object_db.js",
+		"/D/Users/cinder1/Google Drive/workbench/skch_js_alpha/preview/index.html",
+		"/D/Users/cinder1/Google Drive/workbench/skch_js_alpha/main.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/sources/jsblend/example_main.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/script/transition_handler.fade.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/script/math.js",
+		"/D/Users/cinder1/Google Drive/workbench/js.blend/source/main.js",
+		"/D/Users/cinder1/Google Drive/workbench/js.blend/source/threejs/texture.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/sources/jsblend/js.blend.js",
+		"/D/Users/cinder1/Google Drive/workbench/js.blend/build/js.blend.js",
+		"/D/Users/cinder1/Google Drive/workbench/js.blend/node_modules/base64-js/base64js.min.js",
+		"/D/Users/cinder1/Google Drive/workbench/js.blend/node_modules/base64-js/index.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/views/projects/jsblend.html",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/sources/jsblend/src/builder/builder.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/sources/jsblend/three.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/sources/jsblend/build/jsblend.js",
+		"/D/Users/cinder1/Google Drive/KEA Andrews/TroubleShooting/Images/Images Do Not Align Well.txt",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/sources/jsblend/src/jsblend.js",
+		"/D/Users/cinder1/AppData/Local/Temp/fz3temp-2/0cd6f74978401c7084ae9fd128a23f6d-1.css",
+		"/D/Users/cinder1/AppData/Local/Temp/fz3temp-2/6cda17a110b7ccf459418aaf8117d421.css",
+		"/D/Users/cinder1/AppData/Local/Temp/fz3temp-2/624d9265353ad37f23120460007e683e.css",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/sources/jsblend/test_blend_files/suzanne.blend",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/sources/jsblend/node_modules/base64-js/base64js.min.js",
+		"/D/Users/cinder1/Google Drive/workbench/js.blend/example/example_main.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/css/view.css",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/css/view_mobile.css",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/script/dynamic_injection_handler.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/css/ticket.css",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/css/primary.css",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/index.html",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/script/incinerator_handler.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/css/ticket_mobile.css",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/views/experiments/marshfield.html",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/views/main.html",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/script/main.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/script/loader_handler.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/views/templates/ticket.template.html",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/sources/blueline/page/create/html/tab_template.html",
+		"/D/Users/cinder1/AppData/Roaming/Sublime Text 3/Packages/HTMLBeautify/HTMLBeautify.sublime-settings",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/views/about.html",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/views/projects/blendjs.html",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/views/projects/blueline.html",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/views/projects/marshfield.html",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/sources/particle_fervor/pf_class.js",
+		"/D/test.rsk",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/views/main_view.html",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/script/transition_handler.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/script/blastoff.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/views/style_view.html",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/script/handlebars-v4.0.10.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/script/page_handler.js",
+		"/D/Projects (Old)/BM_WK/bluemirage/standard/page_sys.js",
+		"/D/Projects (Old)/Bluegate/Homepage_will_be_index_when_finished.html",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/views/welcome.html",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/The main component in the Galactrax Central engine",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/script/physier.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/css/warpfield.css",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/script/physier_obj.js",
+		"/D/Google Drive/KEA Andrews/TroubleShooting/Contact Form 7/origianl_scripts.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/script/physier_constraints.js",
+		"/D/Users/cinder1/Google Drive/workbench/my_site/script/physier_math.js",
+		"/C/Users/Galavtrax/AppData/Local/Temp/fz3temp-4/numinate.min.js",
+		"/C/Users/Galavtrax/AppData/Local/Temp/fz3temp-4/numinate.1.0.1.min.js",
+		"/D/Google Drive/KEA Andrews/TroubleShooting/Numinate Commas/numinate.1.0.1.min.js",
+		"/D/Google Drive/KEA Andrews/TroubleShooting/Numinate Commas/Numinate Commas Report.txt",
+		"/D/Google Drive/KEA Andrews/TroubleShooting/Sticky Navbar/Navigation link Underline Report.txt",
+		"/D/Google Drive/KEA Andrews/TroubleShooting/Sticky Navbar/Navigation Bar Not Working Report.txt",
+		"/D/Google Drive/KEA Andrews/TroubleShooting/Sticky Navbar/origianl_scripts.js",
+		"/C/Users/Galavtrax/AppData/Local/Temp/fz3temp-4/f3d673af6b1108af098bef88f14b8d83-2.js",
+		"/D/Google Drive/KEA Andrews/TroubleShooting/Sticky Navbar/f3d673af6b1108af098bef88f14b8d83-2.js",
+		"/D/Google Drive/KEA Andrews/TroubleShooting/Numify Commas/Numify Commas Report.txt",
+		"/C/Users/Galavtrax/AppData/Local/Temp/fz3temp-2/functions.js",
+		"/C/Users/Galavtrax/AppData/Local/Temp/fz3temp-3/kwte-admin-custom.js",
+		"/C/Users/Galavtrax/AppData/Local/Temp/fz3temp-3/0d588786843a524cf73db53064328569-2.js",
+		"/D/Google Drive/workbench/my_site/script/warpfield.js",
+		"/D/Google Drive/workbench/my_site/script/card.js",
+		"/D/Google Drive/workbench/my_site/css/primary.css",
+		"/D/Google Drive/workbench/my_site/css/warpfield.css",
+		"/D/Google Drive/workbench/my_site/views/about.html",
+		"/D/Google Drive/workbench/my_site/index.html",
+		"/D/Google Drive/workbench/my_site/script/cardagain_card.js",
+		"/D/Google Drive/workbench/my_site/views/welcome.html",
+		"/D/Google Drive/workbench/my_site/script/cardagain.js",
+		"/D/Google Drive/workbench/my_site/views/musing1.html",
+		"/D/Google Drive/workbench/my_site/views/main_view.html",
+		"/D/Google Drive/workbench/SVG Test Redux/index.html",
+		"/D/Google Drive/workbench/skch_js_alpha/alpha/js/systems/traversers/update.traverser.js",
+		"/D/Google Drive/workbench/my_site/script/gl/math/mat33.js",
+		"/D/Google Drive/workbench/my_site/script/gl/math/common.js",
+		"/D/Google Drive/workbench/my_site/script/gl/math/vec4.js",
+		"/D/Google Drive/workbench/my_site/script/gl/math/vec3.js",
+		"/D/Google Drive/workbench/my_site/script/gl/math/vec2.js",
+		"/D/Google Drive/workbench/my_site/script/gl/math/quat.js"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 392.0,
+		"where_history":
+		[
+			"C:\\Users\\Tech Support\\Dropbox\\workspace\\skch_cpp_beta\\source",
+			"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js",
+			"D:\\Users\\cinder1\\Dropbox\\workspace\\skch_library\\alpha\\js",
+			"C:\\Users\\Tech Support\\Dropbox\\workspace\\skch_library\\alpha\\js\\",
+			"C:\\Users\\Tech Support\\Dropbox\\workspace\\skch_library\\alpha\\js",
+			"/Users/TechSupport/Dropbox/workspace/skch_library/alpha/js",
+			"C:\\Users\\Tech Support\\Dropbox\\workspace\\skch_library\\alpha\\js",
+			"D:\\Users\\cinder1\\Dropbox\\workspace\\skch_library\\alpha\\js",
+			"D:\\Users\\cinder1\\Desktop\\Research\\Text\\theta-master\\src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"MouseMoveR",
+			"MouseMover",
+			"Mouse",
+			"setData",
+			"spine",
+			"cell_address",
+			"insertValue",
+			"20",
+			"insertValue",
+			"<<2",
+			"obj",
+			"i",
+			"constructor",
+			"IS_TRANSFORMED",
+			"addr",
+			"generateMatrixData",
+			"mats",
+			"generateMatrixData",
+			"debugger",
+			"attach",
+			"geometry",
+			"createThreeJSBufferGeometry",
+			"builder",
+			"blend_parser",
+			"filename_or_filedata",
+			"sr",
+			"return_object",
+			"onParseReady",
+			"BLENDER_FILE",
+			"unzipper",
+			"worker_code",
+			"web_address",
+			"UNUSED_NETWORK_PORT",
+			"textures",
+			"texture",
+			"console.l",
+			"console.lg",
+			"screen",
+			"transi",
+			"center-bar",
+			"footer",
+			"block",
+			"80",
+			"header",
+			"width=\"250\"",
+			"block",
+			"block-end",
+			"block",
+			"flex-header",
+			"960",
+			"marshfield_logo",
+			"compareCode",
+			"60",
+			"66",
+			"in",
+			"code",
+			"HTTPRequest",
+			"require",
+			"trans",
+			"scale",
+			"height",
+			"overf",
+			"trunk",
+			"white",
+			"right",
+			"210",
+			"log mobile",
+			"text",
+			"4",
+			"5",
+			"6",
+			"7",
+			"8",
+			"9",
+			"7",
+			"9",
+			"8",
+			"render",
+			"val",
+			"input",
+			"output",
+			"Numify",
+			"targetTouches",
+			"touch.",
+			"console",
+			"false",
+			"true",
+			"-=",
+			".a",
+			"+=",
+			"array2",
+			"vx",
+			"v",
+			"0.02",
+			"02",
+			"dot",
+			"vec2",
+			"constraint",
+			"update",
+			"cards",
+			"physiC",
+			"physC",
+			"physic",
+			"physiC",
+			"phsiC",
+			"phsic",
+			"intersectionTest",
+			"grabConstraint",
+			"intersectionTest",
+			"solve",
+			"cards",
+			"itter",
+			"z-index",
+			"z-in",
+			"z",
+			"n",
+			"dot",
+			"cross",
+			"sub",
+			"v",
+			"root_card",
+			"this.w",
+			"SqareRoot",
+			"conns",
+			"array",
+			"0",
+			"(",
+			"()"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			".__data_address__",
+			"void ByteCodeCortex",
+			"grabOpcodeFlag(instr)",
+			"(unsigned char *, unsigned char)",
+			"(unsigned char * ip, unsigned char instr)",
+			"namespace SKCH { namespace COMPONENT {",
+			"namespace SKCH { namespace SYSTEM {",
+			"namespace SKCH { namespace LIBRARY {",
+			"namespace SKCH { namespace SYSTEM {",
+			"namespace SKCH { namespace SYS {",
+			"SKCH::SYSTEM::",
+			"SKCH::COMPONENT::",
+			"SKCH::LIBRARY::",
+			"cell_type",
+			"data_types",
+			"RNA",
+			"DNA_NAME",
+			"DNA",
+			"DNA_IDENTIFIER_OFFSET",
+			"DNA_ADDRESSES",
+			"DNA_IDENTIFIERS",
+			"DNARoot",
+			"rna",
+			"RNA",
+			"cell.js",
+			"CORTEX",
+			"dna",
+			"Dna",
+			"DNA",
+			"Cell",
+			"cell",
+			"CELL",
+			"Cell",
+			"cell",
+			"CEREBRO",
+			"Cerebro",
+			"cerebro",
+			"CVRT",
+			"VM2.",
+			".backbone",
+			"2",
+			"1"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/untitled.sublime-build",
+	"project": "js.blend",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"render",
+				"source\\objects\\render\\render_slot.js"
+			],
+			[
+				"basic",
+				"source\\systems\\render\\basic.renderer.js"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"text",
+				"source\\systems\\render\\batch\\text.batch.a.js"
+			],
+			[
+				"",
+				"source\\systems\\database\\object_db_redux.js"
+			],
+			[
+				"grid",
+				"source\\objects\\data\\grid.data.immutable_redux.js"
+			],
+			[
+				"object",
+				"source\\systems\\database\\object_db_redux.js"
+			],
+			[
+				"data",
+				"source\\objects\\data\\data.js"
+			],
+			[
+				"cer",
+				"source\\systems\\cerebel\\cerebel.js"
+			],
+			[
+				"core",
+				"source\\systems\\script\\cortex\\cortex.js"
+			],
+			[
+				"dna",
+				"source\\editors\\dna\\dna.editor_redux.js"
+			],
+			[
+				"upda",
+				"source\\systems\\traversers\\update.traverser.js"
+			],
+			[
+				"update",
+				"source\\systems\\traversers\\update.traverser_redux.js"
+			],
+			[
+				"batch",
+				"source\\systems\\render\\batch\\batch.js"
+			],
+			[
+				"bas",
+				"source\\systems\\render\\basic.renderer.js"
+			],
+			[
+				"cere",
+				"source\\systems\\cerebel\\cerebel.js"
+			],
+			[
+				"ast",
+				"source\\systems\\script\\ast_definitions.js"
+			],
+			[
+				"coret",
+				"source\\systems\\script\\cortex\\cortex.js"
+			],
+			[
+				"inp",
+				"source\\systems\\input\\input_handler_redux.js"
+			],
+			[
+				"cell",
+				"source\\objects\\cell_redux.js"
+			],
+			[
+				"travers",
+				"source\\systems\\traversers\\traverser_redux.js"
+			],
+			[
+				"ce",
+				"source\\objects\\cell_redux.js"
+			],
+			[
+				"traer",
+				"source\\systems\\traversers\\traverser_redux.js"
+			],
+			[
+				"obje",
+				"source\\systems\\database\\object_db_redux.js"
+			],
+			[
+				"dn",
+				"source\\editors\\dna\\dna.editor_redux.js"
+			],
+			[
+				"rna",
+				"source\\systems\\traversers\\rna.traverser_redux.js"
+			],
+			[
+				"compil",
+				"source\\systems\\script\\compiler_redux.js"
+			],
+			[
+				"camer",
+				"source\\objects\\data\\camera.data_redux.js"
+			],
+			[
+				"gridred",
+				"source\\objects\\data\\grid.data.immutable_redux.js"
+			],
+			[
+				"objec",
+				"source\\systems\\database\\object_db.js"
+			],
+			[
+				"ex",
+				"my_site\\sources\\jsblend\\example_main.js"
+			],
+			[
+				"exa",
+				"js.blend\\example\\example_main.js"
+			],
+			[
+				"mobi",
+				"css\\view_mobile.css"
+			],
+			[
+				"tick",
+				"css\\ticket.css"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"template",
+				"sources\\blueline\\page\\create\\html\\tab_template.html"
+			],
+			[
+				"main",
+				"views\\main.html"
+			],
+			[
+				"inj",
+				"script\\dynamic_injection_handler.js"
+			],
+			[
+				"prim",
+				"css\\primary.css"
+			],
+			[
+				"view",
+				"css\\view.css"
+			],
+			[
+				"partic",
+				"sources\\particle_fervor\\pf_class.js"
+			],
+			[
+				"about",
+				"views\\about.html"
+			],
+			[
+				"in",
+				"script\\incinerator_handler.js"
+			],
+			[
+				"load",
+				"script\\loader_handler.js"
+			],
+			[
+				"tr",
+				"script\\transition_handler.js"
+			],
+			[
+				"ticket",
+				"css\\ticket.css"
+			],
+			[
+				"tra",
+				"script\\transition_handler.js"
+			],
+			[
+				"page",
+				"script\\page_handler.js"
+			],
+			[
+				"war",
+				"css\\warpfield.css"
+			],
+			[
+				"css",
+				"css\\primary.css"
+			],
+			[
+				"obj",
+				"script\\physier_obj.js"
+			],
+			[
+				"physier",
+				"script\\physier_math.js"
+			],
+			[
+				"w",
+				"script\\warpfield.js"
+			],
+			[
+				"vi",
+				"views\\welcome.html"
+			],
+			[
+				"m",
+				"views\\main_view.html"
+			],
+			[
+				"ca",
+				"script\\cardagain.js"
+			],
+			[
+				"wa",
+				"css\\warpfield.css"
+			],
+			[
+				"wl",
+				"views\\welcome.html"
+			],
+			[
+				"c",
+				"script\\cardagain.js"
+			],
+			[
+				"p",
+				"css\\primary.css"
+			],
+			[
+				"basicsp",
+				"systems\\message_systems\\spine\\basic_spine.h"
+			],
+			[
+				"sp",
+				"library\\abstracts\\spine_abstract.h"
+			],
+			[
+				"spine",
+				"_tests\\spine\\spine_test.h"
+			],
+			[
+				"mess",
+				"components\\message\\message.h"
+			],
+			[
+				"cerebel",
+				"systems\\cerebel\\cerebel.h"
+			],
+			[
+				"libr",
+				"library\\library.h"
+			],
+			[
+				"signal",
+				"components\\signal\\signal.h"
+			],
+			[
+				"messa",
+				"components\\message\\message.h"
+			],
+			[
+				"de",
+				"_program_entries\\debugger_entry_point.cpp"
+			],
+			[
+				"address",
+				"components\\address\\address.h"
+			],
+			[
+				"message",
+				"components\\message\\message.h"
+			],
+			[
+				"cor",
+				"systems\\userspace_programming\\cortex\\cortex_abstract.cpp"
+			],
+			[
+				"byt",
+				"systems\\userspace_programming\\cortex\\basic_byte_code_cortex.cpp"
+			],
+			[
+				"basicb",
+				"systems\\userspace_programming\\cortex\\basic_byte_code_cortex.h"
+			],
+			[
+				"cerebele",
+				"library\\abstracts\\cerebel_extension_abstract.h"
+			],
+			[
+				"basicme",
+				"systems\\stores\\message_stores\\basic_message_store.h"
+			],
+			[
+				"byte",
+				"systems\\userspace_programming\\cortex\\basic_byte_code_cortex.h"
+			],
+			[
+				"adre",
+				"components\\address\\address.h"
+			],
+			[
+				"sign",
+				"components\\signal\\signal.h"
+			],
+			[
+				"gr",
+				"components\\database_object\\Grid\\grid_dbo.h"
+			],
+			[
+				"s",
+				"components\\signal\\signal.h"
+			],
+			[
+				"gan",
+				"components\\ganglion\\ganglion.h"
+			],
+			[
+				"debugg",
+				"_program_entries\\debugger_entry_point.cpp"
+			],
+			[
+				"grap",
+				"library\\abstracts\\graphic_layer_abstract.h"
+			],
+			[
+				"opengl",
+				"systems\\media_layer\\graphic\\opengl\\opengl_graphic.cpp"
+			],
+			[
+				"basicbyt",
+				"systems\\userspace_programming\\coretex\\basic_byte_code_cortex.h"
+			],
+			[
+				"gangl",
+				"source\\components\\ganglion\\ganglion.h"
+			],
+			[
+				"axon",
+				"source\\components\\axon\\axon.h"
+			],
+			[
+				"basicg",
+				"source\\systems\\stores\\ganglia_host\\basic_ganglia_host.h"
+			],
+			[
+				"axion",
+				"source\\library\\abstracts\\cerebel_extension_abstract.h"
+			],
+			[
+				"deb",
+				"source\\_program_entries\\debugger_entry_point.cpp"
+			],
+			[
+				"g",
+				"source\\components\\ganglion\\ganglion.h"
+			],
+			[
+				"ax",
+				"source\\components\\axon\\axon.h"
+			],
+			[
+				"hash",
+				"source\\components\\hash_id\\hash_id.h"
+			],
+			[
+				"mat",
+				"systems/gl/math/mat44.js"
+			],
+			[
+				"prog",
+				"systems/gl/components/program.js"
+			],
+			[
+				"grd",
+				"objects/data/grid.data.immutable.js"
+			],
+			[
+				"ob",
+				"systems/database/object_db.js"
+			],
+			[
+				"pro",
+				"systems/script/assembler/property.js"
+			],
+			[
+				"pa",
+				"systems/script/parser.js"
+			],
+			[
+				"inpu",
+				"systems/input/input_handler.js"
+			],
+			[
+				"gl",
+				"global_consts.js"
+			],
+			[
+				"send",
+				"systems/script/assembler/send.js"
+			],
+			[
+				"r",
+				"objects/rna.js"
+			],
+			[
+				"access",
+				"systems/script/assembler/access.js"
+			],
+			[
+				"prop",
+				"systems/script/assembler/property.js"
+			],
+			[
+				"ass",
+				"systems/script/assembler/assignment.js"
+			],
+			[
+				"iden",
+				"systems/script/assembler/identifier.js"
+			],
+			[
+				"assig",
+				"systems/script/assembler/assignment.js"
+			],
+			[
+				"rec",
+				"systems/script/assembler/receive.js"
+			],
+			[
+				"stat",
+				"systems/script/assembler/statements.js"
+			],
+			[
+				"compi",
+				"systems/script/compiler.js"
+			],
+			[
+				"sele",
+				"systems/script/assembler/selector.js"
+			],
+			[
+				"mult",
+				"systems/script/assembler/multiplication.js"
+			],
+			[
+				"num",
+				"systems/script/assembler/number.js"
+			],
+			[
+				"compiler",
+				"systems/script/compiler.js"
+			],
+			[
+				"sta",
+				"systems/script/assembler/statements.js"
+			],
+			[
+				"add",
+				"systems/script/assembler/addition.js"
+			],
+			[
+				"identi",
+				"systems/script/assembler/identifier.js"
+			],
+			[
+				"glo",
+				"global_consts.js"
+			],
+			[
+				"id",
+				"systems\\script\\assembler\\identifier.js"
+			],
+			[
+				"proper",
+				"systems\\script\\assembler\\property.js"
+			],
+			[
+				"parse",
+				"systems\\script\\parser.js"
+			],
+			[
+				"dec",
+				"systems\\script\\assembler\\declaration.js"
+			],
+			[
+				"ignore",
+				"systems\\script\\assembler\\ignore.js"
+			],
+			[
+				"glob",
+				"global_consts.js"
+			],
+			[
+				"pr",
+				"systems\\script\\assembler\\program.js"
+			],
+			[
+				"ganglia",
+				"systems\\cerebro\\ganglia.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 96.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,42 +1,74 @@
-# JS.BLEND - *.blend the native way
+# JS.BLEND
+## The Blender file parser for JavaScript
 
+JS.BLEND is a file parser that is designed to read unmodified Blender files and convert the binary data into JavaScript objects which can be used in JavaScript applications. It's designed with an easy to use interface to allow for quick integration with 3D apps, namely by using the ThreeJS library. It also allows for manual access to Blender `C` class and data structures that are converted into JavaScript objects.
 
-Tired of having to export your Blender projects with the mirad of export formats that adds a layer of seperation and complexity between your favorite 3D application and the browser? Want a direct, seamless path between creation of 3D models in Blender and interacting with them in Webgl apps like Three.js?  
+## Demo
 
+[Example](https://galactrax.github.com/js.blend/)
 
-JS.BLEND is a simple script that can parse Blender files (.blend) and create an output that is easily navigatable in Javascript. The script reads raw binary blend files and converts them into javascript objects. With this there is no need to write or use exporters in Blender to get mesh data out and into applications like Three.js. JS.BLEND parses the entire Blender file and creates data objects for meshes, lights, cameras, and any other data structure that is stored in the Blender file. Now, raw Blender files can be directly imported into projects and parsed, allowing access to the entire Blender project and cutting out the additional step of exporting from Blender.  
+## Usage
 
+JS.BLEND can be installed through NPM. Once downloaded, the production file can be found in the /build folder as js.blend.js. The source files will need built using Browserify or any other Common.js module bundler.
 
-The HTML file contains a basic example where .blend files can be drag-and-dropped from the local file system into the browser window. The files are parsed with JS.BLEND and any mesh data that is in the .blend file gets converted into a Threes.js geometry object and then added to the scene and displayed.
-
-Try it out live here: http://cinder1.github.io/js.blend/
-
-# USAGE
-
-JS.BLEND can be used by creating a new parsing object by calling jsblend().
-
-```js
- var blendparser = jsblend(); 
- 
-```
- Assign a function to jsblend.onParseReady to gain access to an array of data objects once JS.BLEND has finished reading the file and converting it into Javascript objects. 
-
-```js
-  blendparser.onParseReady = function(parsed_blend_file) {
-      console.log(parsed_blend_file);
-  }
-  
+```html
+<script src="./build/js.blend.js"></script>
 ```
 
- Pass a raw binary Blender file in the form of a BLOB or an ArrayBuffer to start parsing. 
+Using the script is easy. You can either pass to 'JSBLEND' a raw `ArrayBuffer` or `Blob` containing the binary of the 
+Blender file, or you can supply a URI to the Blender file resource. 
 
-```js
-//Use .loadBlendFromArrayBuffer for ArrayBuffer
-blendparser.loadBlendFromArrayBuffer(ab);
+```javascript
+	JSBLEND(array_buffer).then((blend)=>{...})
 
-//Use .loadBlendFromBlob for BLOB
-blendparser.loadBlendFromBlob(blob);
-
+	JSBLEND(blob).then((blend)=>{...})
+	
+	JSBLEND("./blends/test.blend").then((blend)=>{...})
 ```
 
-Check out the code in the example to see how this comes together to extract and display meshes from .blend files.
+A `promise` will be returned that will provide a reference to a parsed blender file object in the response, or a string with an error message if the file could not be parsed.
+
+```javascript
+	JSBLEND("./blends/test.jpg").then((blend)=>{}).catch((error)=>{
+		console.log(error) //->  "Not a Blender file"
+	}); 
+```
+### ThreeJS
+
+To use the parsed results with ThreeJS a `three` member is available in the response object. This member contains two function: `loadScene` and `loadObject`.
+
+`*.three.loadScene([ThreeJSScene])` will load Lights, Mesh Objects, and Materials into a ThreeJS `scene` object that is passed to the function.
+
+```javascript
+	var scene = new THREE.Scene();
+
+	blend.three.loadScene(scene);
+```
+
+`*.three.loadObject([string])` accepts a string with the name of a Blender object and will attempt to extract and return an equivilant ThreeJS object.
+
+```javascript
+	var light = blend.three.loadObject("Lamp"); //-> ThreeJS light returned;
+
+	var cube = blend.three.loadObject("Cube"); //-> ThreeJS Mesh Object with materials returned;
+```
+
+#### Notes on using with Blender
+
+Please see the following document for more information on using JS.BLEND with ThreeJS: [notes](./threejs_notes.md)
+
+### Raw Data
+
+JS.BLEND works by turning the schemas, also known in Blender as SDNAs, in the .blend file into JavaScript prototype objects. It then creates new objects from these prototypes, one for every single data structure stored in the file. The actual data is left stored in an `ArrayBuffer` and `TypedArray` views and `DataViews` used to make the stuctured data available to the rest of JS. 
+
+The compiled objects can be found by accessing `blend.file.objects`, which is used as a key/value lookup for all data structures from the file.  For example `blend.file.objects["Mesh"]` will return an array of all mesh objects stored in the file. 
+
+Official documentation for Blender data structures is hard to come by, and there have been several changes to the data structures since version 1.0 of Blender. This means that accessing and using the raw data is a bit of a discovery process, and requires utilizing the Debugger to investigate the object prototypes to see what members they contain. 
+
+#### Potential
+
+Since the entire .blend file is made available through this script, every single resource that can be created in Blender and saved to file can be accessed and used in JavaScript. This means that, ultimataly, information such as animation data, bone hiearchies, and particle system setups can be saved in Blender and then immediatly extracted and used in Javascript and integrated into projects.
+
+## License
+
+This program is free to use and distribute under the MIT. 

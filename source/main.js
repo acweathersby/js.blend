@@ -7,6 +7,7 @@ const parser = require("./parser/parser.js")();
 
 
 function loadFile(blender_file, res, rej){	
+	
 	three_module = three(blender_file);
 
 	//TODO: Report any errors with ThreeJS before continuing.
@@ -23,11 +24,15 @@ JSBLEND = (fileuri_or_filedata, name = "")=>{
 
 	const promise = new Promise(
 		(res, rej) =>{
-			parser.onParseReady = (blender_file) => {
-				loadFile(blender_file, res, rej);
+			parser.onParseReady = (blender_file, error) => {
+				if(error){
+					rej(error);
+				}else{
+					loadFile(blender_file, res, rej);
+				}
 			};
 
-			//If fileuri_or_filedata is a string, attempt to load the file through asynchronously
+			//If fileuri_or_filedata is a string, attempt to load the file asynchronously
 			if(typeof fileuri_or_filedata == "string"){
 				
 				let request = new XMLHttpRequest();
@@ -46,7 +51,6 @@ JSBLEND = (fileuri_or_filedata, name = "")=>{
 
 			    return;
 			}
-			debugger
 
 			if(typeof fileuri_or_filedata == "object"){
 				//Attempt to load from blob or array buffer;
@@ -62,10 +66,8 @@ JSBLEND = (fileuri_or_filedata, name = "")=>{
 			}
 
 			//Unknown file type passed -> abort and reject
-
-			console.warn("Unsupported file type passed to JSBlend", fileuri_or_filedata);
 			
-			rej("Unsupported file type passed to JSBlend");
+			rej("Unsupported file type passed to JSBlend ${fileuri_or_filedata}");
 		}
 	);
 

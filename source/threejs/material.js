@@ -59,11 +59,50 @@ module.exports = (() => {
         }
     }
 
+    function applyMirrorMapping(blender_texture, three_texture, material) {
+        if (blender_texture.mapto & texture_mappings.mirror) {
+            material.envMap = three_texture;
+            material.envMapIntensity = blender_texture.mirrfac;
+        }
+    }
+
+    var blender_texture_coordinates = {
+        GENERATED : 1,
+        REFLECTION : 2,
+        NORMAL:4,
+        GLOBAL : 8,
+        UV : 16,
+        OBJECT : 32,
+        WINDOW: 1024,
+        TANGENT:4096,
+        PARTICLE: 8192,
+        STRESS:16384
+    }
+
+    var blender_texture_mapping = {
+        FLAT : 0,
+        CUBE : 1,
+        TUBE : 2,
+        SPHERE : 3
+    }
+
     function applyTexture(blender_texture, material) {
         //extract blender_texture data. Use Only if image has been supplied.
         if (blender_texture && blender_texture.tex && blender_texture.tex.ima) {
-            
+
             let three_texture = createTexture(blender_texture.tex.ima);
+
+            if(blender_texture.texco == blender_texture_coordinates.REFLECTION){
+                switch(blender_texture.mapping){
+                    case blender_texture_mapping.FLAT:
+                        three_texture.mapping = THREE.EquirectangularReflectionMapping;
+                    break;
+                    case blender_texture_mapping.SPHERE:
+                        three_texture.mapping = THREE.SphericalReflectionMapping;
+                    break;
+                }
+                 //three_texture.mapping = THREE.EquirectangularRefractionMapping;
+            }
             
             applyColorMapping(blender_texture, three_texture, material);
             
@@ -72,6 +111,8 @@ module.exports = (() => {
             applyAlphaMapping(blender_texture, three_texture, material);
             
             applyNormalMapping(blender_texture, three_texture, material);
+
+            applyMirrorMapping(blender_texture, three_texture, material);
         }
     }
 
@@ -88,12 +129,17 @@ module.exports = (() => {
                 break;
             case blender_specular_types.blinn:
             case blender_specular_types.phong:
-                console.log(blend_mat.har, (1 - (blend_mat.har / 512)), blend_mat);
+
                 material = new THREE.MeshStandardMaterial();
                 material.color.setRGB(blend_mat.r, blend_mat.g, blend_mat.b);
                 //material.specular.setRGB(blend_mat.specr, blend_mat.specg, blend_mat.specb);
                 material.roughness = (1 - (blend_mat.har / 512));
                 material.metalness = 1 - blend_mat.ref;
+                if(blend_mat.alpha < 0.98){
+                    material.transparent = true;
+                    material.opacity = blend_mat.alpha;
+                    console.log(blend_mat, material)
+                }
                 break;
             case blender_specular_types.wardiso:
             case blender_specular_types.cooktorr:

@@ -128,8 +128,6 @@ function createThreeJSGeometry(blender_mesh, origin) {
     for (var i = 0; i < verts.length; i++) {
         let vert = verts[i];
         vert_array.push(new THREE.Vector3(vert.co[0] + origin[0], vert.co[2] + origin[2], -vert.co[1] - origin[1]));
-
-
     }
 
     for (var i = 0; i < faces.length; i++) {
