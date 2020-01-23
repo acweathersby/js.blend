@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2017 Anthony C, Weathersby
+Copyright (c) 2020 Anthony C, Weathersby
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
