@@ -5,7 +5,7 @@ JS.BLEND is a file parser that is designed to read unmodified Blender files and 
 
 ## Demo
 
-[Example](https://galactrax.github.io/js.blend/)
+[Example](https://acweathersby.github.io/js.blend/)
 
 ## Usage
 
