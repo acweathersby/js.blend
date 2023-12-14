@@ -1,0 +1,31 @@
+{
+  "compileOnSave": true,
+  "include": [
+    "./src/**/*"
+  ],
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "rootDir": "./src/",
+    "outDir": "./build/",
+    "types": [
+      "@types/node",
+      "@types/jest"
+    ],
+    "allowJs": true,
+    "alwaysStrict": true,
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "allowSyntheticDefaultImports": false,
+    "disableReferencedProjectLoad": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "sourceMap": false,
+  }
+}

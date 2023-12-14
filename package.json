@@ -1,12 +1,13 @@
 {
   "name": "jsblend",
-  "version": "0.1.2",
-  "description": "A Blender to Javascript File Reader",
+  "type": "module",
+  "version": "0.2.0",
+  "description": "The Blender file parser for JavaScript",
   "main": "./build/jsblend.js",
   "scripts": {
     "watch": "npm-watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify ./source/main.js -o ./build/js.blend.js -d"
+    "build": "esbuild"
   },
   "watch": {
     "build": "source"
@@ -21,14 +22,19 @@
     "base64-js": "^1.2.1"
   },
   "devDependencies": {
-    "npm-watch": "^0.2.0"
+    "@types/jest": "^29.5.11",
+    "esbuild": "^0.19.9",
+    "jest": "^29.7.0",
+    "npm-watch": "^0.2.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Galactrax/js.blend.git"
+    "url": "git+https://github.com/acweathersby/js.blend.git"
   },
   "bugs": {
-    "url": "https://github.com/Galactrax/js.blend/issues"
+    "url": "https://github.com/acweathersby/js.blend/issues"
   },
-  "homepage": "https://github.com/Galactrax/js.blend#readme"
+  "homepage": "https://github.com/acweathersby/js.blend#readme"
 }
