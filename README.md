@@ -1,11 +1,25 @@
 # JS.BLEND
 ## The Blender file parser for JavaScript
 
-JS.BLEND is a file parser that is designed to read unmodified Blender files and convert the binary data into JavaScript objects which can be used in JavaScript applications. It's designed with an easy to use interface to allow for quick integration with 3D apps, namely by using the ThreeJS library. It also allows for manual access to Blender `C` class and data structures that are converted into JavaScript objects.
+JS.BLEND is a file parser that is designed to read unmodified Blender files and convert the binary data into JavaScript objects which can be used within JavaScript applications. It's designed with an easy to use interface to allow for quick integration with 3D apps, namely by using the ThreeJS library. It also allows for easy access to Blender's `C` data structures through JavaScript objects.
 
 ## Demo
 
 [Example](https://galactrax.github.io/js.blend/)
+
+
+## Get 
+
+
+### NPM
+```sh
+npm install --save js_blend
+```
+
+### Yarn 
+```sh
+yarn add js_blend
+```
 
 ## Usage
 
@@ -59,7 +73,7 @@ Please see the following document for more information on using JS.BLEND with Th
 
 ### Raw Data
 
-JS.BLEND works by turning the schemas, also known in Blender as SDNAs, in the .blend file into JavaScript prototype objects. It then creates new objects from these prototypes, one for every single data structure stored in the file. The actual data is left stored in an `ArrayBuffer` and `TypedArray` views and `DataViews` used to make the stuctured data available to the rest of JS. 
+JS.BLEND works by turning reading the C/C++ struct schemas defined the .blend file, also known as SDNAs, converting them into Javascript Protoypes, and applying them to the binary objects stored in the Blender file. It then creates new objects from these prototypes, one for every single data structure stored in the file. The actual data is left stored in an `ArrayBuffer` and `TypedArray` views and `DataViews` used to make the stuctured data available to the rest of JS. 
 
 The compiled objects can be found by accessing `blend.file.objects`, which is used as a key/value lookup for all data structures from the file.  For example `blend.file.objects["Mesh"]` will return an array of all mesh objects stored in the file. 
 
@@ -67,8 +81,8 @@ Official documentation for Blender data structures is hard to come by, and there
 
 #### Potential
 
-Since the entire .blend file is made available through this script, every single resource that can be created in Blender and saved to file can be accessed and used in JavaScript. This means that, ultimataly, information such as animation data, bone hiearchies, and particle system setups can be saved in Blender and then immediatly extracted and used in Javascript and integrated into projects.
+Since the entire .blend file is made available through this script, nearly every resource that can be created in Blender and saved to file can be accessed and used in JavaScript (the only exceptions are functions and function pointers, which cannot be reasonably converted into JavaScript equivalent). This means that, ultimately, information such as animation data, bone hierarchies, and particle system setups can be saved in Blender and then immediatly extracted and used in Javascript and integrated into projects.
 
 ## License
 
-This program is free to use and distribute under the MIT. 
+This program is free to use and distribute under a MIT license. 

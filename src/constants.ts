@@ -1,0 +1,11 @@
+export const BLENDER_NAME_SIZE = 7;
+export const POINTER_SIZE_OFFSET = BLENDER_NAME_SIZE;
+export const _32BIT_POINTER_SIZE_SYMBOL = 95;
+export const ENDIAN_FLAG_OFFSET = 8;
+export const BIG_ENDIAN_SYMBOL = 86;
+export const VERSION_OFFSET = 9;
+export const BLENDER_HEADER_SIZE = 12;
+export const BLOCK_OFFSET = BLENDER_HEADER_SIZE;
+export const BLOCK_HEADER_SIZE = 16;
+export const SDNA_STRUCT_COUNT_OFFSET = 8;
+const SDNA_NAME_LIST_OFFSET = 12;
