@@ -1,3 +1,5 @@
-import { BlenderFile } from "./file";
+import { BlenderFile } from "./core/file";
 
-export { BlenderFile };
+import { ThreeJSExt } from "./extensions/blender_threejs_extensions";
+
+export { BlenderFile, ThreeJSExt };

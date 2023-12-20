@@ -25,8 +25,8 @@ import { align4, toString } from "./utils";
  * a binary source.
  */
 export class BlenderFile {
-  private is_valid: Boolean = false;
-  private _SDNA_: SDNA | null | undefined = undefined;
+  protected is_valid: Boolean = false;
+  protected _SDNA_: SDNA | null | undefined = undefined;
   readonly address_map: Map<BigInt, number> = new Map;
   readonly object_groups: Map<string, number[]> = new Map;
   readonly named_objects: Map<string, number> = new Map;
@@ -348,7 +348,7 @@ export class BlenderFile {
     return obj;
   }
 
-  private constructor(file: ArrayBuffer) {
+  protected constructor(file: ArrayBuffer) {
     this.binary = file;
   }
 
@@ -411,7 +411,6 @@ export class BlenderBlock {
 
 
     this.sdna_index = dv.getInt32(o + SDNAnr_OFFSET, bf.little_endian);
-
     this.num_of_blocks = dv.getInt32(o + NR_OFFSET, bf.little_endian);
   }
 
