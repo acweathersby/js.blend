@@ -47,22 +47,7 @@ export class SDNA {
       };
 
       // @ts-ignore
-      if (prop.is_pointer) {
-        obj_prop.get = ((off: number, bf: BlenderFile) => function () {
-          // @ts-ignore
-          let t = this;
-          let dv = <DataView>(t).dv;
-          let ptr = bf.pointer_size > 4 ? dv.getBigInt64(off, bf.little_endian) : BigInt(dv.getInt32(off, bf.little_endian));
-          let val = bf.address_map.get(ptr);
-          if (val || ptr == 0n) {
-            // @ts-ignore - SDNA is friend of BlenderFile
-            return bf.createObject(new BlenderBlock(val, bf));
-          } else {
-            return null;
-          }
-        })(offset, bf);
-        name = name.slice(1);
-      } else if (prop.is_array && prop.array_data) {
+      if (prop.is_array && prop.array_data) {
         let { base_name, lengths } = prop.array_data;
 
         let getter = null;
@@ -70,8 +55,6 @@ export class SDNA {
         if (prop.type == "char" && lengths.length == 1) {
           /// Replace with a string. 
           obj_prop.get = ((off: number, length: number) => function () {
-
-
             // @ts-ignore
             return toString(this.dv.buffer, this.dv.byteOffset + off, length);
           })(offset, lengths[0]);
@@ -93,7 +76,7 @@ export class SDNA {
               }
             }
             return objs;
-          })(length, prop.size, bf);
+          })(lengths[0], prop.size, bf);
         } else {
           switch (prop.type) {
             case "float":
@@ -118,6 +101,22 @@ export class SDNA {
           }
         }
         name = base_name;
+      } else if (prop.is_pointer) {
+        obj_prop.get = ((off: number, bf: BlenderFile) => function () {
+          // @ts-ignore
+          let t = this;
+          let dv = <DataView>(t).dv;
+          let ptr = bf.pointer_size > 4 ? dv.getBigInt64(off, bf.little_endian) : BigInt(dv.getInt32(off, bf.little_endian));
+          let val = bf.address_map.get(ptr);
+          if (val || ptr == 0n) {
+            // @ts-ignore - SDNA is friend of BlenderFile
+            return bf.createObject(new BlenderBlock(val, bf));
+          } else {
+            return null;
+          }
+        })(offset, bf);
+
+        name = name.slice(1);
       } else {
         switch (prop.type) {
           case "uint64_t":

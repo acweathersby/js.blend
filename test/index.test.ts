@@ -1,4 +1,4 @@
-import { BlenderFile } from '../src';
+import { BlenderFile, ThreeJSExt } from '../src';
 import * as fs from "fs";
 
 const EXAMPLE_FILE_REL_PATH_278 = "./test/test.278.blend";
@@ -65,3 +65,17 @@ describe('Read Blender Objects', () => {
   test.todo("Reads scene data")
   test.todo("Reads render data")
 });
+
+describe('ThreeJS Extension File', () => {
+  let blender_file: ThreeJSExt;
+  let blender_file_400: ThreeJSExt;
+  beforeAll(async () => {
+    blender_file = await ThreeJSExt.read(
+      (await fs.promises.readFile(EXAMPLE_FILE_REL_PATH_278)).buffer
+    );
+  })
+  test("Reads Mesh Info", () => {
+    expect(blender_file.getMesh("Suzanne")).toBeDefined();
+  })
+});
+

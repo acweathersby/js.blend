@@ -122,31 +122,44 @@ export class BlenderFile {
 
 
   get meshes(): any[] {
+    // Ensure the file has been parsed;
     let _ = this.SDNA;
+
     return this.getObjectsByType("Mesh");
   }
 
   get lights(): any[] {
+    // Ensure the file has been parsed;
     let _ = this.SDNA;
+
     return this.getObjectsByType("Light");
   }
 
   get materials(): any[] {
+    // Ensure the file has been parsed;
     let _ = this.SDNA;
+
     return this.getObjectsByType("Material");
   }
 
   get scenes(): any[] {
+    // Ensure the file has been parsed;
     let _ = this.SDNA;
+
     return this.getObjectsByType("Scene");
   }
 
   get cameras(): any[] {
+    // Ensure the file has been parsed;
     let _ = this.SDNA;
+
     return this.getObjectsByType("Camera");
   }
 
   getObjectById(name: string): any {
+    // Ensure the file has been parsed;
+    let _ = this.SDNA;
+
     let offset = this.named_objects.get(name);
     if (offset) {
       return this.createObject(new BlenderBlock(offset, this));
@@ -239,7 +252,7 @@ export class BlenderFile {
 
       if (block.code !== "DNA1" && block.code !== "ENDB") {
         let def = SDNA?.struct_definitions[block.sdna_index];
-        if (def && block.num_of_blocks > 0) {
+        if (def && block.num_of_elements > 0) {
 
           if (block.data_size < def.byte_size) {
             // Block is invalid; Most likely not a SDNA block, but rather an array or source of a pointer.
@@ -269,8 +282,8 @@ export class BlenderFile {
     }
   }
 
-  private createFromSDNAOffset(sdna_index: number, offset: number, size: number): any | null {
-    let cached_object = this.object_cache.get(offset);
+  private createFromSDNAOffset(sdna_index: number, start_offset: number, element_byte_size: number, count: number = 1, cache_index: number = start_offset): any | null {
+    let cached_object = this.object_cache.get(cache_index);
 
     if (cached_object)
       return cached_object;
@@ -288,64 +301,63 @@ export class BlenderFile {
 
     if (!properties) return null;
 
-    let obj = Object.create({}, {
-      _type_: {
-        value: def.name,
-        writable: false,
-        enumerable: true,
-      },
-      dv: {
-        value: new DataView(this.binary, offset, size),
-        writable: false,
-        enumerable: false,
-      },
-      ...properties
-    });
+    if (count > 1) {
 
-    this.object_cache.set(offset, obj)
+      let array = [];
 
-    return obj;
+      for (let i = 0; i < count; i++) {
+
+        array.push(Object.create({}, {
+          _type_: {
+            value: def.name,
+            writable: false,
+            enumerable: true,
+          },
+          dv: {
+            value: new DataView(this.binary, start_offset + element_byte_size * i, element_byte_size),
+            writable: false,
+            enumerable: false,
+          },
+          ...properties
+        }))
+      }
+
+      this.object_cache.set(cache_index, array)
+
+      return array;
+    } else {
+      let obj = Object.create({}, {
+        _type_: {
+          value: def.name,
+          writable: false,
+          enumerable: true,
+        },
+        dv: {
+          value: new DataView(this.binary, start_offset, element_byte_size),
+          writable: false,
+          enumerable: false,
+        },
+        ...properties
+      });
+
+
+
+      this.object_cache.set(cache_index, obj)
+
+      return obj;
+    }
   }
 
+  //*  
   private createObject(block: BlenderBlock): any | null {
-    let cached_object = this.object_cache.get(block.offset);
-
-    if (cached_object)
-      return cached_object;
-
-    let SDNA = this.SDNA;
-
-    if (!SDNA) return null;
-
     if (block.block_size >= this.binary.byteLength) return null;
-
-    let def = SDNA.struct_definitions[block.sdna_index];
-
-    if (!def) return null;
-
-    let properties = SDNA.getPropertyDescriptors(this, block.sdna_index);
-
-    if (!properties) return null;
-
-    if (!block.data_dv) return null;
-
-    let obj = Object.create({}, {
-      _type_: {
-        value: def.name,
-        writable: false,
-        enumerable: true,
-      },
-      dv: {
-        value: block.data_dv,
-        writable: false,
-        enumerable: false,
-      },
-      ...properties
-    });
-
-    this.object_cache.set(block.offset, obj)
-
-    return obj;
+    return this.createFromSDNAOffset(
+      block.sdna_index,
+      block.data_segment_start,
+      block.data_size / block.num_of_elements,
+      block.num_of_elements,
+      block.offset
+    );
   }
 
   protected constructor(file: ArrayBuffer) {
@@ -382,7 +394,7 @@ export class BlenderBlock {
   private len: number = 0;            // offset 4
   readonly pointer: BigInt;           // offset 8
   readonly sdna_index: number;        // offset 12 / 16 - depending on pointer size
-  readonly num_of_blocks: number;    // offset 16 / 20 - depending on pointer size 
+  readonly num_of_elements: number;    // offset 16 / 20 - depending on pointer size 
 
   // Convience Properties
   readonly offset: number = 0;
@@ -411,7 +423,7 @@ export class BlenderBlock {
 
 
     this.sdna_index = dv.getInt32(o + SDNAnr_OFFSET, bf.little_endian);
-    this.num_of_blocks = dv.getInt32(o + NR_OFFSET, bf.little_endian);
+    this.num_of_elements = dv.getInt32(o + NR_OFFSET, bf.little_endian);
   }
 
   get dv(): DataView {
