@@ -1,15 +1,23 @@
 # JS.BLEND
 ## The Blender file parser for JavaScript
 
-JS.BLEND is a file parser that is designed to read unmodified Blender files and convert the binary data into JavaScript objects which can be used within JavaScript applications. It's designed with an easy to use interface to allow for quick integration with 3D apps, namely by using the ThreeJS library. It also allows for easy access to Blender's `C` data structures through JavaScript objects.
+JS.BLEND is a file parser that is designed to read unmodified Blender files and convert it's binary objects into JavaScript objects, which then can be used directly in JavaScript. It's designed with an easy to use interface to allow for quick integration with 3D apps, namely by using the ThreeJS library. It also allows for easy access to Blender's `C` data structures through JavaScript objects.
+
+> ## WARNING 
+> For experimental work only!
+> 
+> This project makes no attempt to establish a standard way to access data produced by Blender. 
+> Crucially, there is no standard `.blend` file format, and that format is subject to change without warning. 
+> No guarantees can be made that this project is, or will be, able to open a given `.blend` file. 
+>
+> If you need a stable way of accessing data from Blender, consider using an exporter / importer for a standard file format, 
+> such as `obj`, `usd`, or `fbx`.
 
 ## Demo
 
 [Example](https://galactrax.github.io/js.blend/)
 
-
 ## Get 
-
 
 ### NPM
 ```sh
@@ -32,12 +40,14 @@ JS.BLEND can be installed through NPM. Once downloaded, the production file can 
 Using the script is easy. You can either pass to 'JSBLEND' a raw `ArrayBuffer` or `Blob` containing the binary of the 
 Blender file, or you can supply a URI to the Blender file resource. 
 
-```javascript
-	JSBLEND(array_buffer).then((blend)=>{...})
+```typescript
+ import { BlenderFile } from "js.blend";
 
-	JSBLEND(blob).then((blend)=>{...})
-	
-	JSBLEND("./blends/test.blend").then((blend)=>{...})
+ let blender_file = await BlenderFile("path/to/file.blend");
+
+  let thumbnail = blender_file.getThumbnailPNG();
+
+  
 ```
 
 A `promise` will be returned that will provide a reference to a parsed blender file object in the response, or a string with an error message if the file could not be parsed.
@@ -62,6 +72,10 @@ To use the parsed results with ThreeJS a `three` member is available in the resp
 `*.three.loadObject([string])` accepts a string with the name of a Blender object and will attempt to extract and return an equivilant ThreeJS object.
 
 ```javascript
+
+
+  var light = three_blend.loadLight("Lamp");
+
 	var light = blend.three.loadObject("Lamp"); //-> ThreeJS light returned;
 
 	var cube = blend.three.loadObject("Cube"); //-> ThreeJS Mesh Object with materials returned;
