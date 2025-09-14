@@ -20,6 +20,11 @@ import {
 
 import { align4, toString } from "./utils";
 
+export type BlendObj = {
+  _type_ : "object" | string,
+  db: DataView
+} & any;
+
 /**
  * @brief Represents a single blender file loaded from 
  * a binary source.
@@ -156,10 +161,10 @@ export class BlenderFile {
     return this.getObjectsByType("Camera");
   }
 
-  getObjectById(name: string): any {
+  getObjectById(name: string): BlendObj | null {
     // Ensure the file has been parsed;
     let _ = this.SDNA;
-
+    
     let offset = this.named_objects.get(name);
     if (offset) {
       return this.createObject(new BlenderBlock(offset, this));
@@ -282,7 +287,7 @@ export class BlenderFile {
     }
   }
 
-  private createFromSDNAOffset(sdna_index: number, start_offset: number, element_byte_size: number, count: number = 1, cache_index: number = start_offset): any | null {
+  private createFromSDNAOffset(sdna_index: number, start_offset: number, element_byte_size: number, count: number = 1, cache_index: number = start_offset): BlendObj | null {
     let cached_object = this.object_cache.get(cache_index);
 
     if (cached_object)

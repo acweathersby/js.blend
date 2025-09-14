@@ -56,3 +56,9 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# Build Folder
+build/
+
+# Old Source code
+old_source/

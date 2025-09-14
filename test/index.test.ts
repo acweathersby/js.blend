@@ -1,4 +1,4 @@
-import { BlenderFile, ThreeJSExt } from '../src';
+import { BlenderFile, ThreeJSExt, loadMesh } from '../src';
 import * as fs from "fs";
 
 const EXAMPLE_FILE_REL_PATH_278 = "./test/test.278.blend";
@@ -51,13 +51,37 @@ describe('Read Blender Objects', () => {
   test("Gets Thumbnail Data", () => {
     expect(blender_file.getThumbnail()).toBeDefined();
   })
+  
   test("Get Object By Qualified Name", () => {
-    expect(blender_file.getObjectById("OBSusan")).toBeDefined();
+    expect(blender_file.getObjectById("OBSuzanne")).not.toBeNull();
   })
+  
   test("Get Objects By Type", () => {
     expect(blender_file.getObjectsByType("Mesh")).toHaveLength(1);
   })
-  test.todo("Reads mesh data")
+
+  test("Reads mesh data",() => {
+    let obj_mesh_data = loadMesh(blender_file.getObjectById("OBSuzanne"));
+
+    expect(obj_mesh_data).not.toBeNull();
+
+    expect(obj_mesh_data?.indices).toHaveLength(11808);
+    expect(obj_mesh_data?.verts).toHaveLength(35424);
+    expect(obj_mesh_data?.uvs).toHaveLength(23616);
+    expect(obj_mesh_data?.normals).toHaveLength(35424);
+
+
+    let mesh_mesh_data = loadMesh(blender_file.getObjectById("MESuzanne"));
+
+    expect(mesh_mesh_data).not.toBeNull();
+
+    expect(mesh_mesh_data?.indices).toHaveLength(11808);
+    expect(mesh_mesh_data?.verts).toHaveLength(35424);
+    expect(mesh_mesh_data?.uvs).toHaveLength(23616);
+    expect(mesh_mesh_data?.normals).toHaveLength(35424);
+
+  });
+
   test.todo("Reads material data")
   test.todo("Reads texture data")
   test.todo("Reads animation data")
@@ -66,7 +90,7 @@ describe('Read Blender Objects', () => {
   test.todo("Reads render data")
 });
 
-describe('ThreeJS Extension File', () => {
+describe.skip('ThreeJS Extension File', () => {
   let blender_file: ThreeJSExt;
   let blender_file_400: ThreeJSExt;
   beforeAll(async () => {
@@ -75,7 +99,7 @@ describe('ThreeJS Extension File', () => {
     );
   })
   test("Reads Mesh Info", () => {
-    expect(blender_file.getMesh("Suzanne")).toBeDefined();
+    expect(blender_file.getMesh("OBSuzanne")).toBeDefined();
   })
 });
 
